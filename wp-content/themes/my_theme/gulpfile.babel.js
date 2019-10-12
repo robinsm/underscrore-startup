@@ -12,7 +12,7 @@ import autoprefixer from 'autoprefixer';
 const PRODUCTION = yargs.argv.prod;
 
 export const styles = () => {
-	return src('src/scss/bundle.scss')
+	return src('src/sass/style.scss')
 		.pipe(gulpif(!PRODUCTION, sourcemaps.init()))
 		.pipe(sass().on('error', sass.logError))
 		.pipe(gulpif(PRODUCTION, postcss([autoprefixer])))
