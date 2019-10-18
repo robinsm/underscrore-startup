@@ -37,7 +37,17 @@
 						'menu_id' => 'primary-menu',
 						'menu_class' => 'nav__links',
 					));
-				?>
+                ?>
+
+                <ul class="nav__links__language">
+                    <li id="" class="">
+                        <a href="/">EN</a></li>
+                    <li id="" class="">
+                        <a href="/fr">FR</a></li>
+                    <li id="" class="">
+                        <a href="/de">DE</a></li>
+                    </li>
+                </ul>
             </nav>
 
             <div class="mobile__menu">
@@ -50,17 +60,29 @@
 
                 <div class="hamburger__nav">
                     <div class="hamburger__nav__wrapper">
-                        <!--                             <a href="#">Services</a>
-                            <a href="#">Projects</a>
-							<a href="#">About Us</a> -->
-                        <?php
-							wp_nav_menu(array(
-								'theme_location' => 'menu-1',
-								'menu_id' => 'primary-menu',
-								'container_class' => 'hamburger__nav__items',
-								'container' => 'nav',
-							));
-						?>
+
+                        <nav class="hamburger__nav__items">
+                            <?php
+                                wp_nav_menu(array(
+                                    'theme_location' => 'menu-1',
+                                    'menu_id' => 'primary-menu',
+                                ));
+                            ?>
+
+                            <ul class="hamburger__nav__items__language">
+                                <li id="" class="">
+                                    <a href="/">EN</a></li>
+                                <li id="" class="">
+                                    <a href="/fr">FR</a></li>
+                                <li id="" class="">
+                                    <a href="/de">DE</a></li>
+                                </li>
+                            </ul>
+
+                        </nav>
+
+
+
                     </div>
                 </div>
             </div>

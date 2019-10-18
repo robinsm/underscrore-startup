@@ -20,7 +20,13 @@ a {
 	cursor: pointer;
 }
 
-.nav__links {
+nav {
+	// we want our languages on the same row
+	display: flex;
+}
+
+.nav__links,
+.nav__links__language {
 	list-style-type: none;
 	margin-block-start: 0px;
 	margin-block-end: 0px;
@@ -33,6 +39,13 @@ a {
 	li {
 		display: inline-block;
 		padding: 0 14px;
+
+		&.current-menu-item {
+			a,
+			a:visited {
+				color: $color__text-menu-main-hover;
+			}
+		}
 
 		a {
 			transition: all 0.3s ease 0s;
@@ -49,18 +62,10 @@ a {
 	}
 }
 
-.med__button {
-	width: 111px;
-	height: 36px;
-	background-color: transparent;
-	border: 1px solid #ecf0f1;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: all 0.3s ease 0s;
-
-	&:hover {
-		border: 1px solid #e74d71;
-		background-color: #e74d71;
+.nav__links__language {
+	margin-left: 3rem;
+	li {
+		padding: 0 2px;
 	}
 }
 
@@ -116,7 +121,7 @@ a {
 	z-index: 4;
 	width: 100%;
 	height: 100%;
-	background-color: #050620;
+	background-color: #ffffff;
 	top: -100%;
 	left: 0;
 	right: 0;
@@ -136,8 +141,8 @@ a {
 	flex-direction: column;
 	height: 100%;
 	align-items: center;
-	justify-content: top;
-	margin-top: 20%;
+	justify-content: center;
+	border: 1px solid red;
 
 	ul {
 		list-style-type: none;
@@ -151,8 +156,14 @@ a {
 
 		li {
 			padding: 10px 0;
-			text-transform: uppercase;
 			font-size: 0.8rem;
+
+			&.current-menu-item {
+				a,
+				a:visited {
+					color: $color__text-menu-main-hover;
+				}
+			}
 
 			a {
 				font-size: 0.8rem;
@@ -170,12 +181,22 @@ a {
 	}
 }
 
+ul.hamburger__nav__items__language {
+	display: flex;
+	flex-direction: row;
+	margin-top: 15%;
+
+	li {
+		padding: 0px 10px;
+	}
+}
+
 @media screen and (max-width: 1000px) {
 	.mobile__menu {
 		display: inherit;
 	}
 	.nav__links,
-	.med__button {
+	.nav__links__language {
 		display: none;
 	}
 }
