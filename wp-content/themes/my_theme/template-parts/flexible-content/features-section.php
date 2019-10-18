@@ -1,10 +1,9 @@
 <?php
 if( get_row_layout() == 'features_section' ):
 ?>
-<div class="container-fluid">
-    <div class="row features_section">
+<div class="features_section">
 
-        <?php if( have_rows('features_repeater') ):
+    <?php if( have_rows('features_repeater') ):
 
             while ( have_rows('features_repeater') ) : the_row();
                         
@@ -21,24 +20,23 @@ if( get_row_layout() == 'features_section' ):
                 $title = get_sub_field('title');
             ?>
 
-        <div class="feature">
-            <div class="feature-icon-and-title">
-                <div class="icon">
-                    <img src="<?php echo $icon_url;?>" alt="" />
-                </div>
-                <div class="title">
-                    <?php echo $title; ?>
-                </div>
+    <div class="feature">
+        <div class="feature-icon-and-title">
+            <div class="icon">
+                <img src="<?php echo $icon_url;?>" alt="" />
             </div>
-
+            <div class="title">
+                <?php echo $title; ?>
+            </div>
         </div>
 
-
-        <?php endwhile; ?>
-
-
-        <?php endif; ?>
-
     </div>
+
+
+    <?php endwhile; ?>
+
+
+    <?php endif; ?>
+
 </div>
 <?php endif; ?>
