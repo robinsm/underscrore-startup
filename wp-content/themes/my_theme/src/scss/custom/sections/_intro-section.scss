@@ -6,5 +6,11 @@
 	.intro {
 		margin: 128px 0px;
 		text-align: center;
+		color: #89929f;
+
+		// Medium devices (tablets, 768px and up)
+		@media (min-width: 768px) {
+			max-width: 50%;
+		}
 	}
 }
