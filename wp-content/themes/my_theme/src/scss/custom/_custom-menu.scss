@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
 li,
-a,
-.med__button {
+a {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 18px;
 	color: #ecf0f1;
@@ -13,8 +12,8 @@ a,
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 20px 0;
-	background-color: #404040;
+	min-height: 94px;
+	background-color: #fff;
 }
 
 .logo {
@@ -34,11 +33,10 @@ a,
 	li {
 		display: inline-block;
 		padding: 0 14px;
-		text-transform: uppercase;
 
 		a {
 			transition: all 0.3s ease 0s;
-			font-size: 0.7rem;
+			font-size: 0.8rem;
 
 			&:visited {
 				color: $color__text-menu-main;

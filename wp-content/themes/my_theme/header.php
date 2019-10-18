@@ -27,7 +27,8 @@
 
         <header id="masthead" class="site-header">
 
-            <img class="logo" src="<?php echo get_template_directory_uri();?>/images/logo.svg" alt="logo" />
+            <img class="logo" src="<?php echo get_template_directory_uri();?>/images/consultants-associes-sa-marque.svg"
+                alt="logo" />
 
             <nav id="site-navigation" class="main-navigation">
                 <?php
@@ -38,8 +39,6 @@
 					));
 				?>
             </nav>
-
-            <a href="#"><button class="med__button">Contact</button></a>
 
             <div class="mobile__menu">
                 <input id="toggle" type="checkbox" />
