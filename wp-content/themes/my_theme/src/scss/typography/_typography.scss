@@ -8,7 +8,7 @@ textarea {
 	font-family: $font__main;
 	@include font-size(1);
 	line-height: $font__line-height-body;
-	font-family: 'Montserrat', Helvetica, Arial, Lucida, sans-serif;
+	font-family: 'Roboto', Helvetica, Arial, Lucida, sans-serif;
 }
 
 @import 'headings';

@@ -1,0 +1,32 @@
+.hero_section {
+	background-color: #395e95;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		color: #ffffff;
+
+		align-items: center;
+		min-height: 700px;
+
+		.illustration {
+		}
+
+		.title_and_subtitle {
+		}
+
+		// Medium devices (tablets, 768px and up)
+		@media (min-width: 768px) {
+			flex-direction: row-reverse;
+			min-height: 700px;
+
+			.illustration {
+			}
+
+			.title_and_subtitle {
+				max-width: 40%;
+				margin-right: 10%;
+			}
+		}
+	}
+}
