@@ -1,10 +1,9 @@
 <?php
 if( get_row_layout() == 'services_section' ):
 ?>
-<div class="container-fluid">
-    <div class="row services_section">
+<div class="services_section">
 
-        <?php if( have_rows('services_repeater') ):
+    <?php if( have_rows('services_repeater') ):
 
             while ( have_rows('services_repeater') ) : the_row();
                         
@@ -22,24 +21,23 @@ if( get_row_layout() == 'services_section' ):
                 $description = get_sub_field('description');
             ?>
 
-        <div class="service" style="background-image: url('<?php echo $image_url;?>'); background-size: cover;">
-            <div class="title">
-                <?php echo $title; ?>
-            </div>
-            <div class="symbol">
-                |
-            </div>
-            <div class="description">
-                <?php echo $description; ?>
-            </div>
+    <div class="service" style="background-image: url('<?php echo $image_url;?>'); background-size: cover;">
+        <div class="title">
+            <?php echo $title; ?>
         </div>
-
-
-        <?php endwhile; ?>
-
-
-        <?php endif; ?>
-
+        <div class="symbol">
+            |
+        </div>
+        <div class="description">
+            <?php echo $description; ?>
+        </div>
     </div>
+
+
+    <?php endwhile; ?>
+
+
+    <?php endif; ?>
+
 </div>
 <?php endif; ?>

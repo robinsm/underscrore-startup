@@ -2,7 +2,7 @@
 if( get_row_layout() == 'intro_section' ):
 ?>
 <div class="container-fluid">
-    <div class="row intro_section">
+    <div class="intro_section">
 
         <?php 
             $intro = get_sub_field('intro');
