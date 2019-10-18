@@ -1,0 +1,53 @@
+.features_section {
+	// on mobile, we want a vertical column of features
+	flex-direction: column;
+
+	.feature {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		//flex-basis: 100%;
+		flex: 1;
+		min-height: 500px;
+		align-items: center;
+
+		.feature-icon-and-title {
+			color: #89929f;
+
+			.icon {
+				margin: 20px 0px;
+				width: 88px;
+				height: 88px;
+			}
+			.title {
+				margin: 20px 0px;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	// Medium devices (tablets, 768px and up)
+	@media (min-width: 768px) {
+		// on ipad resolutions, we want the features laid out in a 2by2 grid
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		.feature {
+			flex-basis: 50%;
+		}
+	}
+
+	// Large devices (desktops, 992px and up)
+	@media (min-width: 992px) {
+		// on desktop resolutions, we want the features laid out in a row
+		// so we need to
+		// - disable the wrapping applied at smaller resolutions
+		// - set flex-basis back to 100%
+		flex-direction: row;
+		flex-wrap: nowrap;
+		.feature {
+			flex-basis: 100%;
+		}
+	}
+}
