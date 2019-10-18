@@ -1,0 +1,26 @@
+.services_section {
+	// on mobile, we want a vertical column of services
+	flex-direction: column;
+
+	.service {
+		display: flex;
+		flex-direction: column;
+		// flex-basis: 100%;
+		flex: 1;
+		min-height: 400px;
+		align-items: center;
+
+		color: white;
+
+		.title {
+			padding: 100px 0px;
+			text-transform: uppercase;
+		}
+	}
+
+	// Large devices (desktops, 992px and up)
+	@media (min-width: 992px) {
+		// on bigger resolutions, we want the services laid out in a row.
+		flex-direction: row;
+	}
+}
