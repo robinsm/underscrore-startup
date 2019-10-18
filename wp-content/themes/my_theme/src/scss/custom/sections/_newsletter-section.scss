@@ -1,0 +1,69 @@
+.newsletter_section {
+	display: flex;
+	flex-direction: column;
+	/* 
+	
+	align-items: center;
+	justify-content: center; */
+
+	margin: 128px 0px;
+
+	.illustration {
+	}
+
+	.form {
+		margin-top: 60px;
+		color: #89929f;
+
+		.message {
+			text-align: center;
+		}
+
+		label {
+			// remove the 'label' element used by the plugin as we do not need it.
+			display: none;
+		}
+
+		input {
+			width: 100%;
+			padding: 8px 12px;
+			-webkit-border-radius: 0px;
+			border-radius: 0px;
+		}
+
+		input[type='submit'] {
+			padding: 15px 15px;
+			background: #ff8f1c;
+			color: white;
+			text-transform: uppercase;
+			border: 0 none;
+			cursor: pointer;
+			-webkit-border-radius: 0px;
+			border-radius: 0px;
+			width: 100%;
+		}
+	}
+
+	// Medium devices (tablets, 768px and up)
+	@media (min-width: 768px) {
+		flex-direction: row;
+
+		.form {
+			margin-top: 0px;
+			margin-left: 3rem;
+			text-align: left;
+
+			.message {
+				text-align: left;
+			}
+
+			input {
+				width: 50%;
+			}
+
+			input[type='submit'] {
+				width: auto;
+			}
+		}
+	}
+}
