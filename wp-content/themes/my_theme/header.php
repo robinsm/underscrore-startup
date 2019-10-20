@@ -27,7 +27,8 @@
 
         <header id="masthead" class="site-header">
 
-            <img class="logo" src="<?php echo get_template_directory_uri();?>/images/consultants-associes-sa-marque.svg"
+            <img class="logo"
+                src="<?php echo get_template_directory_uri();?>/dist/images/consultants-associes-sa-marque.svg"
                 alt="logo" />
 
             <nav id="site-navigation" class="main-navigation">

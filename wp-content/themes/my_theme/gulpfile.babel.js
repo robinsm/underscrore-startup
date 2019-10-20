@@ -9,6 +9,7 @@ import gulpif from 'gulp-if';
 import postcss from 'gulp-postcss';
 import sourcemaps from 'gulp-sourcemaps';
 import autoprefixer from 'autoprefixer';
+import imagemin from 'gulp-imagemin';
 const PRODUCTION = yargs.argv.prod;
 
 export const styles = () => {
@@ -23,4 +24,11 @@ export const styles = () => {
 
 export const watchForChanges = () => {
 	watch('src/scss/**/*.scss', styles);
+	watch('src/images/**/*.{jpg,jpeg,png,svg,gif}', images);
+};
+
+export const images = () => {
+	return src('src/images/**/*.{jpg,jpeg,png,svg,gif}')
+		.pipe(gulpif(PRODUCTION, imagemin()))
+		.pipe(dest('dist/images'));
 };
