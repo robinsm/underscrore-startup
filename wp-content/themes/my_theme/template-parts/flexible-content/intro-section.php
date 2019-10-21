@@ -1,7 +1,7 @@
 <?php
 if( get_row_layout() == 'intro_section' ):
 ?>
-<div class="container-fluid">
+<div class="container">
     <div class="intro_section">
 
         <?php 
