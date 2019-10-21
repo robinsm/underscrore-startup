@@ -11,26 +11,41 @@
 
 ?>
 
-	</div><!-- #content -->
+</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'my_theme' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'my_theme' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'my_theme' ), 'my_theme', '<a href="http://creative74.co.uk">Robin Mannering</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+<footer id="colophon" class="site-footer">
+
+    <div class="container">
+        <div class="footer_logo_and_menu">
+            <div class="footer_logo">
+
+                <img class="logo"
+                    src="<?php echo get_template_directory_uri();?>/dist/images/consultants-associes-sa-marque-blanche.svg"
+                    alt="logo" />
+            </div>
+            <div class="footer_menu">
+                <?php
+					wp_nav_menu(array(
+						'theme_location' => 'menu-1',
+						'menu_id' => 'primary-menu',
+						'menu_class' => 'nav__links__footer',
+					));
+                ?>
+            </div>
+        </div>
+
+        <div class="copyright_notice">
+            Copyright 2019 Consultants Associés SA. All rights reserved.
+        </div>
+    </div>
+
+
+
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>
