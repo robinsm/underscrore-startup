@@ -17,21 +17,27 @@ if( get_row_layout() == 'services_section' ):
                     $image_large = $image['sizes'][ $image_size ];
                 }	
 
+                $link = get_sub_field('link');
                 $title = get_sub_field('title');
                 $description = get_sub_field('description');
             ?>
 
-    <div class="service" style="background-image: url('<?php echo $image_url;?>'); background-size: cover;">
-        <div class="title">
-            <?php echo $title; ?>
+
+
+    <a href="<?php echo $link; ?>">
+        <div class="service overlay orange"
+            style="background-image: url('<?php echo $image_url;?>'); background-size: cover;">
+            <div class="title">
+                <?php echo $title; ?>
+            </div>
+            <div class="symbol">
+                |
+            </div>
+            <div class="description">
+                <?php echo $description; ?>
+            </div>
         </div>
-        <div class="symbol">
-            |
-        </div>
-        <div class="description">
-            <?php echo $description; ?>
-        </div>
-    </div>
+    </a>
 
 
     <?php endwhile; ?>

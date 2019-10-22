@@ -3,19 +3,48 @@
 	// on mobile, we want a vertical column of services
 	flex-direction: column;
 
-	.service {
-		display: flex;
-		flex-direction: column;
-		// flex-basis: 100%;
-		flex: 1;
-		min-height: 400px;
-		align-items: center;
+	a {
+		.service {
+			display: flex;
+			flex-direction: column;
+			// flex-basis: 100%;
+			flex: 1;
+			min-height: 400px;
+			align-items: center;
 
-		color: white;
+			color: white;
 
-		.title {
-			padding: 100px 0px;
-			text-transform: uppercase;
+			.title {
+				padding: 100px 0px;
+				text-transform: uppercase;
+			}
+		}
+
+		// https://codepen.io/Paulie-D/pen/bqFza
+		.overlay {
+			position: relative;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		.overlay:after {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+		}
+
+		.overlay:hover:after {
+			opacity: 0.5;
+		}
+
+		.orange:after {
+			background-color: orange;
 		}
 	}
 
@@ -23,5 +52,8 @@
 	@media (min-width: 992px) {
 		// on bigger resolutions, we want the services laid out in a row.
 		flex-direction: row;
+		a {
+			flex-basis: 20%;
+		}
 	}
 }
