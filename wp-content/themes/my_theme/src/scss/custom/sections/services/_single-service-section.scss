@@ -1,0 +1,73 @@
+.services_page_single_service_section {
+	.single_service {
+		display: flex;
+		flex-direction: column;
+
+		.title_section {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 300px;
+			text-align: center;
+
+			font-size: 24px;
+			text-transform: uppercase;
+			color: #fff;
+		}
+
+		.body_section {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			justify-content: center;
+			align-items: center;
+			min-height: 500px;
+
+			background-color: #edf0f5;
+
+			.subtitle {
+				width: 80%;
+				color: #6e7a8b;
+			}
+
+			.body {
+				width: 80%;
+				color: #89929f;
+			}
+		}
+
+		// Small devices (landscape phones, 576px and up)
+		@media (min-width: 576px) {
+			.title_section {
+				min-height: 500px;
+			}
+		}
+
+		// Medium devices (tablets, 768px and up)
+		@media (min-width: 768px) {
+		}
+
+		// Large devices (desktops, 992px and up)
+		@media (min-width: 992px) {
+		}
+
+		// Extra large devices (large desktops, 1200px and up)
+		@media (min-width: 1200px) {
+			flex-direction: row;
+
+			min-height: 700px;
+
+			// change direction of alternate rows.
+			&:nth-child(even) {
+				flex-direction: row-reverse;
+			}
+
+			.title_section {
+				flex-basis: 50%;
+			}
+			.body_section {
+				flex-basis: 50%;
+			}
+		}
+	}
+}
