@@ -24,18 +24,59 @@
 		.footer_menu {
 			display: none;
 			margin-left: auto;
+
+			ul {
+				list-style-type: none;
+				margin-block-start: 0px;
+				margin-block-end: 0px;
+
+				margin-inline-start: 0px;
+				margin-inline-end: 0px;
+
+				padding-inline-start: 0px;
+
+				li {
+					display: inline-block;
+					padding: 0 14px;
+
+					&.current-menu-item {
+						a,
+						a:visited {
+							color: #fff;
+						}
+					}
+
+					a {
+						transition: all 0.3s ease 0s;
+						font-size: 0.8rem;
+
+						&:visited {
+							color: #fff;
+						}
+
+						&:hover {
+							color: $color__text-menu-main-hover;
+						}
+					}
+				}
+			}
 		}
 
 		// Small devices (landscape phones, 576px and up)
 		@media (min-width: 576px) {
 			.footer_menu {
 				display: block;
+				margin-left: 0px;
 			}
 		}
 
 		// Large devices (desktops, 992px and up)
 		@media (min-width: 992px) {
 			flex-direction: row;
+
+			.footer_menu {
+				margin-left: auto;
+			}
 		}
 	}
 }
