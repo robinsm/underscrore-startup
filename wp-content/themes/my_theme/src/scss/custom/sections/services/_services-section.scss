@@ -1,0 +1,49 @@
+.services_page_services_section {
+	display: flex;
+	// on mobile, we want a vertical column of services
+	flex-direction: column;
+
+	padding: 100px 0px;
+
+	.service {
+		display: flex;
+		flex-direction: column;
+		// flex-basis: 100%;
+		flex: 1;
+		align-items: center;
+
+		color: #6e7a8b;
+
+		a {
+			font-family: 'Reem Kufi', sans-serif;
+			transition: all 0.3s ease 0s;
+			color: #6e7a8b;
+
+			&:visited {
+				color: #6e7a8b;
+			}
+
+			&:hover {
+				color: $color__text-menu-main-hover;
+			}
+		}
+
+		padding: 30px 0px;
+
+		.title {
+			padding-top: 20px;
+			text-transform: uppercase;
+		}
+	}
+
+	// Large devices (desktops, 992px and up)
+	@media (min-width: 992px) {
+		// on bigger resolutions, we want the services laid out in a row.
+
+		flex-direction: row;
+
+		.service {
+			padding: 0px;
+		}
+	}
+}

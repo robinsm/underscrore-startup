@@ -5,12 +5,12 @@ if( have_rows('flexible_content_page') ):
 	    while ( have_rows('flexible_content_page') ) : the_row();
 
 			// Load flexible modules here
-			require('hero-section.php');
-			require('intro-section.php');
-			require('services-section.php');
-			require('features-section.php');
-			require('partners-section.php');
-			require('newsletter-section.php');
+			require('home/hero-section.php');
+			require('home/intro-section.php');
+			require('home/services-section.php');
+			require('home/features-section.php');
+			require('home/partners-section.php');
+			require('home/newsletter-section.php');
 
 	    endwhile;
 	

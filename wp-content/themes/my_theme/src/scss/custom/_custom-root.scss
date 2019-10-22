@@ -6,9 +6,12 @@
 //@import 'custom/custom-hero';
 @import 'layout/content-container';
 
-@import 'custom/sections/hero-section';
-@import 'custom/sections/intro-section';
-@import 'custom/sections/services-section';
-@import 'custom/sections/features-section';
-@import 'custom/sections/partners-section';
-@import 'custom/sections/newsletter-section';
+@import 'custom/sections/home/hero-section';
+@import 'custom/sections/home/intro-section';
+@import 'custom/sections/home/services-section';
+@import 'custom/sections/home/features-section';
+@import 'custom/sections/home/partners-section';
+@import 'custom/sections/home/newsletter-section';
+
+@import 'custom/sections/services/services-section';
+@import 'custom/sections/services/single-service-section';
