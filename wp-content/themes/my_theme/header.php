@@ -25,6 +25,9 @@
     <div id="page" class="site">
         <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'my_theme');?></a>
 
+        <?php
+            if (!is_page('holding-page')) {
+        ?>
         <header id="masthead" class="site-header">
 
             <img class="logo"
@@ -33,12 +36,12 @@
 
             <nav id="site-navigation" class="main-navigation">
                 <?php
-					wp_nav_menu(array(
-						'theme_location' => 'menu-1',
-						'menu_id' => 'primary-menu',
-						'menu_class' => 'nav__links',
-					));
-                ?>
+                        wp_nav_menu(array(
+                            'theme_location' => 'menu-1',
+                            'menu_id' => 'primary-menu',
+                            'menu_class' => 'nav__links',
+                        ));
+                    ?>
 
                 <ul class="nav__links__language">
                     <li id="" class="">
@@ -64,11 +67,11 @@
 
                         <nav class="hamburger__nav__items">
                             <?php
-                                wp_nav_menu(array(
-                                    'theme_location' => 'menu-1',
-                                    'menu_id' => 'primary-menu',
-                                ));
-                            ?>
+                                    wp_nav_menu(array(
+                                        'theme_location' => 'menu-1',
+                                        'menu_id' => 'primary-menu',
+                                    ));
+                                ?>
 
                             <ul class="hamburger__nav__items__language">
                                 <li id="" class="">
@@ -89,6 +92,8 @@
             </div>
             <!-- #site-navigation -->
         </header><!-- #masthead -->
+        <?php } ?>
+
 
 
         <div id="content" class="site-content">
