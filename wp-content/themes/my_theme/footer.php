@@ -13,7 +13,11 @@
 
 </div><!-- #content -->
 
+<?php
+if (!is_page('holding-page')) {
+?>
 <footer id="colophon" class="site-footer">
+
 
     <div class="container">
         <div class="footer_logo_and_menu">
@@ -42,6 +46,7 @@
 
 
 </footer><!-- #colophon -->
+<?php } ?>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

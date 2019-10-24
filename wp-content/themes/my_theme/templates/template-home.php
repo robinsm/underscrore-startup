@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Home
+ * Template Name: Home Template
  */
 	//require(__DIR__."/custom_attributes.php");
 	get_header(); 

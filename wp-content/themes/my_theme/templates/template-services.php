@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Services
+ * Template Name: Services Template
  */
 	//require(__DIR__."/custom_attributes.php");
 	get_header(); 
