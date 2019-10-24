@@ -100,4 +100,4 @@ wp-content/themes/twenty*/
 node_modules/
 
 # ignore the dist folder
-wp-content/themes/my-theme/dist
+wp-content/themes/my_theme/dist
