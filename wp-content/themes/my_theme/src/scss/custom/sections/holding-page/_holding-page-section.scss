@@ -87,6 +87,23 @@
 				.illustration {
 					margin-right: 50px;
 				}
+
+				.copy {
+					text-align: left;
+				}
+			}
+
+			.location_details {
+				.tel,
+				.email,
+				.address {
+					flex-direction: row;
+					align-items: flex-start;
+
+					.icon {
+						padding-right: 10px;
+					}
+				}
 			}
 		}
 	}
