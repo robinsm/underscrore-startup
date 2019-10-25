@@ -18,7 +18,7 @@
 
 			.illustration {
 				padding: 30px 0px;
-				max-width: 75%;
+				max-width: 420px;
 				margin: 0 auto;
 			}
 
@@ -83,6 +83,7 @@
 			}
 
 			.illustration_and_copy {
+				align-items: flex-end;
 				.illustration {
 					margin-right: 50px;
 				}
