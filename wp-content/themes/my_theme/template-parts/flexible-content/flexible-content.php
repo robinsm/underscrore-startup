@@ -5,7 +5,7 @@ if( have_rows('flexible_content_page') ):
 	    while ( have_rows('flexible_content_page') ) : the_row();
 
 			// Load flexible modules here
-			require('home/hero-section.php');
+			require('shared/hero-section.php');
 			require('home/intro-section.php');
 			require('home/services-section.php');
 			require('home/features-section.php');
