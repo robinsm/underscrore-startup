@@ -37,39 +37,51 @@
 						margin-top: 10px;
 					}
 				}
+
+				.location_details {
+					padding: 50px 0px;
+					font-size: 15px;
+					.tel,
+					.email,
+					.address {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						padding: 20px 0px;
+
+						.icon,
+						.copy {
+							padding: 0px 0px;
+						}
+					}
+
+					// Medium devices (tablets, 768px and up)
+					@media (min-width: 768px) {
+						display: flex;
+
+						.tel,
+						.email,
+						.address {
+							flex-direction: row;
+							align-items: start;
+							padding: 50px 30px;
+
+							.icon {
+								min-width: 20px;
+								margin-right: 10px;
+							}
+						}
+
+						.tel {
+							padding-left: 0px;
+						}
+					}
+				}
 			}
 
 			// Extra large devices (large desktops, 1200px and up)
 			@media (min-width: 1200px) {
 				flex-direction: row;
-			}
-		}
-
-		.location_details {
-			padding: 50px 0px;
-			.tel,
-			.email,
-			.address {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				padding: 20px 0px;
-
-				.icon,
-				.copy {
-					padding: 0px 0px;
-				}
-			}
-
-			// Medium devices (tablets, 768px and up)
-			@media (min-width: 768px) {
-				display: flex;
-
-				.tel,
-				.email,
-				.address {
-					padding: 50px 30px;
-				}
 			}
 		}
 
@@ -83,7 +95,8 @@
 			}
 
 			.illustration_and_copy {
-				align-items: flex-end;
+				align-items: center;
+				margin-top: 10vh;
 				.illustration {
 					margin-right: 50px;
 				}

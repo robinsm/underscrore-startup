@@ -53,6 +53,7 @@ if( get_row_layout() == 'holding_page_section' ):
             </div>
 
             <div class="copy">
+
                 <div class="english">
                     <h2><?php echo $title_english; ?></h2>
                     <p><?php echo $message_english; ?></p>
@@ -66,31 +67,35 @@ if( get_row_layout() == 'holding_page_section' ):
                     <p><?php echo $message_german; ?></p>
                 </div>
 
+                <div class="location_details">
+                    <div class="tel">
+                        <div class="icon"><img
+                                src="<?php echo get_template_directory_uri();?>/dist/images/icons/icon-tel.png"
+                                alt="telephone" /></div>
+                        <div class="copy"><?php echo $tel; ?></div>
+                    </div>
+                    <div class="email">
+                        <div class="icon"><img
+                                src="<?php echo get_template_directory_uri();?>/dist/images/icons/icon-mail.png"
+                                alt="email" /></div>
+                        <div class="copy"><?php echo $email; ?></div>
+                    </div>
+
+
+                    <div class="address">
+                        <div class="icon"><img
+                                src="<?php echo get_template_directory_uri();?>/dist/images/icons/icon-location.png"
+                                alt="location" /></div>
+                        <div class="copy"><?php echo $address; ?></div>
+                    </div>
+
+                </div>
+
             </div>
         </div>
 
 
-        <div class="location_details">
-            <div class="tel">
-                <div class="icon"><img src="<?php echo get_template_directory_uri();?>/dist/images/icons/icon-tel.png"
-                        alt="telephone" /></div>
-                <div class="copy"><?php echo $tel; ?></div>
-            </div>
-            <div class="email">
-                <div class="icon"><img src="<?php echo get_template_directory_uri();?>/dist/images/icons/icon-mail.png"
-                        alt="email" /></div>
-                <div class="copy"><?php echo $email; ?></div>
-            </div>
 
-
-            <div class="address">
-                <div class="icon"><img
-                        src="<?php echo get_template_directory_uri();?>/dist/images/icons/icon-location.png"
-                        alt="location" /></div>
-                <div class="copy"><?php echo $address; ?></div>
-            </div>
-
-        </div>
     </div>
 
 </div>
