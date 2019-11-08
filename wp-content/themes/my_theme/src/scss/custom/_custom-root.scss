@@ -10,6 +10,10 @@
 
 @import 'custom/sections/holding-page/holding-page-section';
 
+// shared sections
+@import 'custom/sections/shared/dual-blurb-section';
+
+// custom sections
 @import 'custom/sections/home/hero-section';
 @import 'custom/sections/home/intro-section';
 @import 'custom/sections/home/services-section';
@@ -18,6 +22,5 @@
 @import 'custom/sections/home/newsletter-section';
 
 @import 'custom/sections/services/services-section';
-@import 'custom/sections/services/single-service-section';
 
 @import 'custom/sections/about/intro-section';

@@ -4,7 +4,7 @@ if( get_row_layout() == 'services_section' ):
 
 <?php if( have_rows('services_repeater') ): ?>
 
-<div class="services_page_single_service_section">
+<div class="dual_blurb_section">
     <?php
 
             $counter = 0;
@@ -28,7 +28,7 @@ if( get_row_layout() == 'services_section' ):
             ?>
 
 
-    <div class="single_service">
+    <div class="dual_blurb">
         <a name="<?php echo $counter; ?>"></a>
         <div class="title_section" style="background-image: url('<?php echo $image_url;?>'); background-size: cover;">
             <h2><?php echo $title; ?></h2>
