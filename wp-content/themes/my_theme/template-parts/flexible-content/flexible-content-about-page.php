@@ -7,6 +7,7 @@ if( have_rows('flexible_content_about_page') ):
 			// Load flexible modules here
 			require('shared/hero-section.php');
 			require('about/intro-section.php');
+			require('about/about-blurbs-section.php');
 
 	    endwhile;
 	

@@ -1,5 +1,5 @@
-.services_page_single_service_section {
-	.single_service {
+.dual_blurb_section {
+	.dual_blurb {
 		display: flex;
 		flex-direction: column;
 
@@ -67,6 +67,10 @@
 			}
 			.body_section {
 				flex-basis: 50%;
+				text-align: left;
+				h2 {
+					font-weight: 400;
+				}
 			}
 		}
 	}
