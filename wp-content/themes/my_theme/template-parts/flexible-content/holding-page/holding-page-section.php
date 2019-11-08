@@ -72,13 +72,13 @@ if( get_row_layout() == 'holding_page_section' ):
                         <div class="icon"><img
                                 src="<?php echo get_template_directory_uri();?>/dist/images/icons/icon-tel.png"
                                 alt="telephone" /></div>
-                        <div class="copy"><?php echo $tel; ?></div>
+                        <div class="copy"><a href="tel:<?php echo $tel; ?>"><?php echo $tel; ?></a></div>
                     </div>
                     <div class="email">
                         <div class="icon"><img
                                 src="<?php echo get_template_directory_uri();?>/dist/images/icons/icon-mail.png"
                                 alt="email" /></div>
-                        <div class="copy"><?php echo $email; ?></div>
+                        <div class="copy"><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></div>
                     </div>
 
 
