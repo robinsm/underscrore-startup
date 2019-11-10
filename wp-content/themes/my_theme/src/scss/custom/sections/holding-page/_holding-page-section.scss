@@ -53,6 +53,16 @@
 						.copy {
 							padding: 0px 0px;
 						}
+
+						a {
+							font-size: 15px;
+							font-weight: 400;
+
+							&:hover,
+							&:visited {
+								color: white;
+							}
+						}
 					}
 
 					// Medium devices (tablets, 768px and up)
@@ -64,7 +74,7 @@
 						.address {
 							flex-direction: row;
 							align-items: start;
-							padding: 50px 30px;
+							padding: 50px 20px;
 
 							.icon {
 								min-width: 20px;
