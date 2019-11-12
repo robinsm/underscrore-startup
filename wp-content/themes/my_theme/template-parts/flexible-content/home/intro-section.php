@@ -8,7 +8,7 @@ if( get_row_layout() == 'intro_section' ):
             $intro = get_sub_field('intro');
         ?>
 
-        <div class="intro">
+        <div class="intro" data-aos="fade-up">
             <?php echo $intro; ?>
         </div>
 

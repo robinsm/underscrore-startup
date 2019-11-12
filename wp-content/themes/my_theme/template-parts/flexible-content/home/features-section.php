@@ -22,10 +22,10 @@ if( get_row_layout() == 'features_section' ):
 
     <div class="feature">
         <div class="feature-icon-and-title">
-            <div class="icon">
+            <div class="icon" data-aos="fade-up">
                 <img src="<?php echo $icon_url;?>" alt="" />
             </div>
-            <div class="title">
+            <div class="title" data-aos="fade-up">
                 <?php echo $title; ?>
             </div>
         </div>
