@@ -25,17 +25,21 @@ if( get_row_layout() == 'services_section' ):
 
 
     <a href="<?php echo $link; ?>">
-        <div class="service overlay orange"
-            style="background-image: url('<?php echo $image_url;?>'); background-size: cover;" data-aos="fade-up">
-            <div class="title">
-                <?php echo $title; ?>
+        <div class="service overlay dark"
+            style="background-image: url('<?php echo $image_url;?>'); background-size: cover;">
+            <div class="service_padding">
+                <div class="title">
+                    <?php echo $title; ?>
+                </div>
+                <div class="symbol">
+                    |
+                </div>
+                <div class="on_hover">+</div>
+                <div class="description">
+                    <?php echo $description; ?>
+                </div>
             </div>
-            <div class="symbol">
-                |
-            </div>
-            <div class="description">
-                <?php echo $description; ?>
-            </div>
+
         </div>
     </a>
 

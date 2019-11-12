@@ -1,59 +1,96 @@
 .services_section {
-	display: flex;
-	// on mobile, we want a vertical column of services
-	flex-direction: column;
+  display: flex;
+  // on mobile, we want a vertical column of services
+  flex-direction: column;
 
-	a {
-		.service {
-			display: flex;
-			flex-direction: column;
-			// flex-basis: 100%;
-			flex: 1;
-			min-height: 400px;
-			align-items: center;
+  a {
+    .service {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
 
-			color: white;
+      text-align: center;
 
-			.title {
-				padding: 100px 0px;
-				text-transform: uppercase;
-			}
-		}
+      color: white;
 
-		// https://codepen.io/Paulie-D/pen/bqFza
-		.overlay {
-			position: relative;
+      .service_padding {
+        padding: 100px 0px;
+        min-height: 400px;
 
-			&:hover {
-				cursor: pointer;
-			}
-		}
+        .title {
+          text-transform: uppercase;
+          padding-bottom: 150px;
+        }
+      }
+    }
 
-		.overlay:after {
-			position: absolute;
-			content: '';
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			opacity: 0;
-		}
+    // fixinf the min-height to prevent 'jumping' when switching between '|' and '+' which have very different font sizes.
+    .symbol,
+    .on_hover {
+      min-height: 50px;
+    }
 
-		.overlay:hover:after {
-			opacity: 0.5;
-		}
+    // https://codepen.io/Paulie-D/pen/bqFza
+    .overlay {
+      position: relative;
 
-		.orange:after {
-			background-color: orange;
-		}
-	}
+      &:hover {
+        cursor: pointer;
+      }
 
-	// Large devices (desktops, 992px and up)
-	@media (min-width: 992px) {
-		// on bigger resolutions, we want the services laid out in a row.
-		flex-direction: row;
-		a {
-			flex-basis: 20%;
-		}
-	}
+      .on_hover {
+        display: none;
+        font-size: 30px; // set the font-size here although we're hiding this element to begin with.
+      }
+    }
+
+    .overlay:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+
+    // hide the '|' char and display the '+' char
+    .overlay:hover {
+      .symbol {
+        display: none;
+      }
+      .on_hover {
+        display: block;
+      }
+    }
+
+    .overlay:hover:after {
+      opacity: 0.5;
+    }
+
+    .orange:after {
+      background-color: orange;
+    }
+
+    .dark:after {
+      background-color: black;
+    }
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    // on bigger resolutions, we want the services laid out in a row.
+    flex-direction: row;
+    a {
+      flex-basis: 20%;
+
+      .service {
+        .service_padding {
+          .title {
+            padding-bottom: 250px;
+          }
+        }
+      }
+    }
+  }
 }

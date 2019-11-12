@@ -19,14 +19,14 @@ if( get_row_layout() == 'hero_section' ):
             $subtitle = get_sub_field('subtitle');
         ?>
 
-    <div class="container">
+    <div class="wide-container">
         <div class="illustration">
             <img src="<?php echo $illustration_url;?>" alt="<?php echo $illustration_alt;?>" />
         </div>
 
         <div class="title_and_subtitle">
-            <h1 data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000"><?php echo $title; ?></h1>
-            <p data-aos="fade-up" data-aos-delay="500"><?php echo $subtitle; ?></p>
+            <h1><?php echo $title; ?></h1>
+            <p><?php echo $subtitle; ?></p>
         </div>
     </div>
 
