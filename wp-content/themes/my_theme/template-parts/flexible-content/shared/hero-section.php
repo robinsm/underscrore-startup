@@ -19,7 +19,7 @@ if( get_row_layout() == 'hero_section' ):
             $subtitle = get_sub_field('subtitle');
         ?>
 
-    <div class="container">
+    <div class="wide-container">
         <div class="illustration">
             <img src="<?php echo $illustration_url;?>" alt="<?php echo $illustration_alt;?>" />
         </div>

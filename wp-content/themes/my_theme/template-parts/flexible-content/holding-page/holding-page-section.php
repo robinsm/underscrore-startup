@@ -32,6 +32,9 @@ if( get_row_layout() == 'holding_page_section' ):
             $message_german = get_sub_field('message_german');
 
             $tel = get_sub_field('tel');
+            if ( !empty($tel) ) {
+                $tel = str_replace(' ', '&nbsp;', $tel);
+            }
             $email = get_sub_field('email');
             $address     = get_sub_field('address');
         ?>

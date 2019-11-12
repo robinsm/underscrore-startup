@@ -19,7 +19,7 @@ if (!is_page('holding-page')) {
 <footer id="colophon" class="site-footer">
 
 
-    <div class="container">
+    <div class="wide-container">
         <div class="footer_logo_and_menu">
             <div class="footer_logo">
 
