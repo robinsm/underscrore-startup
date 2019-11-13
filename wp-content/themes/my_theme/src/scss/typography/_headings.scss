@@ -4,10 +4,10 @@ h3,
 h4,
 h5,
 h6 {
-	clear: both;
-	font-family: 'Reem Kufi', sans-serif;
+  clear: both;
+  font-family: $font__main;
 }
 
 .secondary_font {
-	font-family: 'Roboto', Helvetica, Arial, Lucida, sans-serif;
+  font-family: $font__secondary;
 }
