@@ -25,8 +25,7 @@ if( get_row_layout() == 'services_section' ):
 
 
     <a href="<?php echo $link; ?>">
-        <div class="service overlay"
-            style="background-image: url('<?php echo $image_url;?>'); background-size: cover; ">
+        <div class="service" style="background-image: url('<?php echo $image_url;?>'); background-size: cover; ">
             <div class="service_padding">
                 <div class="title">
                     <?php echo $title; ?>
