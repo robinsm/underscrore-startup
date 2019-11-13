@@ -4,13 +4,12 @@ input,
 select,
 optgroup,
 textarea {
-	color: $color__text-main;
-	font-family: $font__main;
-	@include font-size(1);
-	line-height: $font__line-height-body;
-	font-family: 'Roboto', Helvetica, Arial, Lucida, sans-serif;
+  color: $color__text-main;
+  @include font-size(1);
+  line-height: $font__line-height-body;
+  font-family: "Roboto", Helvetica, Arial, Lucida, sans-serif;
 }
 
-@import 'headings';
+@import "headings";
 
-@import 'copy';
+@import "copy";
