@@ -31,9 +31,11 @@ if( get_row_layout() == 'services_section' ):
                     <?php echo $title; ?>
                 </div>
                 <div class="symbol">
-                    |
+                    <img src="<?php echo get_template_directory_uri();?>/dist/images/icons/vertical-line.svg" alt="" />
                 </div>
-                <div class="on_hover">+</div>
+                <div class="on_hover">
+                    <img src="<?php echo get_template_directory_uri();?>/dist/images/icons/plus.svg" alt="" />
+                </div>
                 <div class="description">
                     <?php echo $description; ?>
                 </div>

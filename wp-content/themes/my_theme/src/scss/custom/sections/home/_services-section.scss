@@ -1,72 +1,64 @@
 .services_section {
-  display: flex;
-  // on mobile, we want a vertical column of services
-  flex-direction: column;
+	display: flex;
+	// on mobile, we want a vertical column of services
+	flex-direction: column;
 
-  a {
-    .service {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
+	a {
+		.service {
+			display: flex;
+			flex-direction: column;
+			flex: 1;
 
-      text-align: center;
+			text-align: center;
 
-      color: white;
+			color: white;
 
-      .service_padding {
-        padding: 100px 0px;
-        min-height: 400px;
+			.service_padding {
+				padding: 100px 0px;
+				min-height: 400px;
 
-        // fixing the min-height to prevent 'jumping' when switching between '|' and '+' which have very different font sizes.
-        .symbol,
-        .on_hover {
-          min-height: 50px;
-        }
+				.on_hover {
+					display: none;
+				}
 
-        .on_hover {
-          display: none;
-          font-size: 30px; // set the font-size here although we're hiding this element to begin with.
-        }
+				.title {
+					text-transform: uppercase;
+					padding-bottom: 150px;
+				}
+			}
 
-        .title {
-          z-index: 3;
-          text-transform: uppercase;
-          padding-bottom: 150px;
-        }
-      }
+			// hide the '|' svg and display the '+' svg
+			&:hover {
+				cursor: pointer;
 
-      // hide the '|' char and display the '+' char
-      &:hover {
-        cursor: pointer;
+				.symbol {
+					display: none;
+				}
+				.on_hover {
+					display: block;
+				}
+			}
 
-        .symbol {
-          display: none;
-        }
-        .on_hover {
-          display: block;
-        }
-      }
+			.service_padding:hover {
+				background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+			}
+		}
+	}
 
-      .service_padding:hover {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-      }
-    }
-  }
+	// Large devices (desktops, 992px and up)
+	@media (min-width: 992px) {
+		// on bigger resolutions, we want the services laid out in a row.
+		flex-direction: row;
+		a {
+			flex-basis: 20%;
 
-  // Large devices (desktops, 992px and up)
-  @media (min-width: 992px) {
-    // on bigger resolutions, we want the services laid out in a row.
-    flex-direction: row;
-    a {
-      flex-basis: 20%;
-
-      .service {
-        .service_padding {
-          .title {
-            padding-bottom: 250px;
-          }
-        }
-      }
-    }
-  }
+			.service {
+				.service_padding {
+					.title {
+						padding-bottom: 250px;
+					}
+				}
+			}
+		}
+	}
 }
