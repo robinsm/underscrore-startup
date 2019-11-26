@@ -17,15 +17,24 @@ if( get_row_layout() == 'services_section' ):
                     $image_large = $image['sizes'][ $image_size ];
                 }	
 
+                $default_background_color = "#909090";
+                $background_color = get_sub_field('background-color');
                 $link = get_sub_field('link');
                 $title = get_sub_field('title');
                 $description = get_sub_field('description');
+
+                // determine style for the background, an image or a colour
+                if( !empty($image) ) {
+                    $style = "background-image: url('" . $image_url . "'); background-size: cover; ";
+                } else {
+                    $style = !empty($background_color) ? "background-color: " . $background_color : "background-color: " . $default_background_color;
+                }
             ?>
 
 
 
     <a href="<?php echo $link; ?>">
-        <div class="service" style="background-image: url('<?php echo $image_url;?>'); background-size: cover; ">
+        <div class="service" style="<?php echo $style;?>">
             <div class="service_padding">
                 <div class="title">
                     <?php echo $title; ?>
