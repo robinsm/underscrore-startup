@@ -1,0 +1,21 @@
+.intro_section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.intro {
+		margin: 128px 0px;
+		text-align: center;
+		color: #89929f;
+		line-height: 30px;
+
+		// Medium devices (tablets, 768px and up)
+		@media (min-width: 768px) {
+		}
+	}
+
+	// Large devices (desktops, 992px and up)
+	@media (min-width: 992px) {
+		margin: 0 25%;
+	}
+}

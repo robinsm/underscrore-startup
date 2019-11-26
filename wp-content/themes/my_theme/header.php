@@ -25,21 +25,34 @@
     <div id="page" class="site">
         <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'my_theme');?></a>
 
+        <?php
+            if (!is_page('holding-page')) {
+        ?>
         <header id="masthead" class="site-header">
 
-            <img class="logo" src="<?php get_template_directory_uri();?>images/logo.svg" alt="logo" />
+            <a href="/"><img class="logo"
+                    src="<?php echo get_template_directory_uri();?>/dist/images/consultants-associes-sa-marque.svg"
+                    alt="logo" /></a>
 
             <nav id="site-navigation" class="main-navigation">
                 <?php
-					wp_nav_menu(array(
-						'theme_location' => 'menu-1',
-						'menu_id' => 'primary-menu',
-						'menu_class' => 'nav__links',
-					));
-				?>
-            </nav>
+                        wp_nav_menu(array(
+                            'theme_location' => 'menu-1',
+                            'menu_id' => 'primary-menu',
+                            'menu_class' => 'nav__links',
+                        ));
+                    ?>
 
-            <a href="#"><button class="med__button">Contact</button></a>
+                <ul class="nav__links__language">
+                    <li id="" class="">
+                        <a href="/">EN</a></li>
+                    <li id="" class="">
+                        <a href="/fr">FR</a></li>
+                    <li id="" class="">
+                        <a href="/de">DE</a></li>
+                    </li>
+                </ul>
+            </nav>
 
             <div class="mobile__menu">
                 <input id="toggle" type="checkbox" />
@@ -51,22 +64,36 @@
 
                 <div class="hamburger__nav">
                     <div class="hamburger__nav__wrapper">
-                        <!--                             <a href="#">Services</a>
-                            <a href="#">Projects</a>
-							<a href="#">About Us</a> -->
-                        <?php
-							wp_nav_menu(array(
-								'theme_location' => 'menu-1',
-								'menu_id' => 'primary-menu',
-								'container_class' => 'hamburger__nav__items',
-								'container' => 'nav',
-							));
-						?>
+
+                        <nav class="hamburger__nav__items">
+                            <?php
+                                    wp_nav_menu(array(
+                                        'theme_location' => 'menu-1',
+                                        'menu_id' => 'primary-menu',
+                                    ));
+                                ?>
+
+                            <ul class="hamburger__nav__items__language">
+                                <li id="" class="">
+                                    <a href="/">EN</a></li>
+                                <li id="" class="">
+                                    <a href="/fr">FR</a></li>
+                                <li id="" class="">
+                                    <a href="/de">DE</a></li>
+                                </li>
+                            </ul>
+
+                        </nav>
+
+
+
                     </div>
                 </div>
             </div>
             <!-- #site-navigation -->
         </header><!-- #masthead -->
+        <?php } ?>
+
 
 
         <div id="content" class="site-content">

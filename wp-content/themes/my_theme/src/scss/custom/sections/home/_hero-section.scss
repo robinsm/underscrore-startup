@@ -1,0 +1,49 @@
+.hero_section {
+	background-color: #395e95;
+
+	.wide-container {
+		display: flex;
+		flex-direction: column;
+		color: #ffffff;
+
+		align-items: center;
+		justify-content: center;
+		min-height: 700px;
+		padding: 100px 0px;
+
+		.illustration {
+		}
+
+		.title_and_subtitle {
+			text-align: center;
+		}
+
+		// Medium devices (tablets, 768px and up)
+		@media (min-width: 768px) {
+			flex-direction: column;
+			padding-top: 250px;
+			padding-bottom: 250px;
+
+			.illustration {
+			}
+
+			.title_and_subtitle {
+				max-width: 80%;
+				justify-content: center;
+
+				h1 {
+					font-size: 52px;
+				}
+			}
+		}
+
+		// Large devices (desktops, 992px and up)
+		@media (min-width: 992px) {
+			flex-direction: row-reverse;
+			.title_and_subtitle {
+				padding-right: 10%;
+				text-align: left;
+			}
+		}
+	}
+}
