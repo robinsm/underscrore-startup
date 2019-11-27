@@ -122,7 +122,7 @@ if( get_row_layout() == 'news_section' ):
 
             <?php
             if(!empty($news_items_array)): 
-                for ($index = $num_recent_news_items_to_show; $index <= $num_recent_news_items_to_show; $index++) {    
+                for ($index = $num_recent_news_items_to_show; $index <= count($news_items_array) - 1; $index++) {    
         ?>
             <div class="most-recent-news-articles">
                 <?php display_news_article($news_items_array, $index); ?>
