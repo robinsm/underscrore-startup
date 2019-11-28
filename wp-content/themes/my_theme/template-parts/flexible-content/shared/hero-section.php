@@ -17,9 +17,11 @@ if( get_row_layout() == 'hero_section' ):
             
             $title = get_sub_field('title');
             $subtitle = get_sub_field('subtitle');
+
+            $reduce_padding = get_sub_field('reduce_padding');
         ?>
 
-    <div class="wide-container">
+    <div class="wide-container <?php echo $reduce_padding ? 'reduce-padding' : '' ?>">
         <div class="illustration">
             <img src="<?php echo $illustration_url;?>" alt="<?php echo $illustration_alt;?>" />
         </div>

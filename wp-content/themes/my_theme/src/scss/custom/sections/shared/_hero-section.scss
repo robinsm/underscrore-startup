@@ -9,7 +9,7 @@
 		align-items: center;
 		justify-content: center;
 		min-height: 700px;
-		padding: 100px 0px;
+		padding: 120px 0px;
 
 		.illustration {
 		}
@@ -21,8 +21,8 @@
 		// Medium devices (tablets, 768px and up)
 		@media (min-width: 768px) {
 			flex-direction: column;
-			padding-top: 250px;
-			padding-bottom: 250px;
+			padding-top: 120px;
+			padding-bottom: 120px;
 
 			.illustration {
 			}
@@ -40,9 +40,31 @@
 		// Large devices (desktops, 992px and up)
 		@media (min-width: 992px) {
 			flex-direction: row-reverse;
+
+			// we want the hero image to have less padding in some instances on desktop
+			// this is typically set within the page editor
+			// if reduce_padding is set via ACF Pro, we apply the class 'reduce-padding'
+			min-height: 0px;
+			&.reduce-padding {
+				padding: 50px 0px;
+			}
+
+			.illustration {
+				flex-basis: 50%;
+			}
 			.title_and_subtitle {
-				padding-right: 10%;
+				flex-basis: 50%;
 				text-align: left;
+
+				h1 {
+					margin: 0px 0px;
+					padding-right: 20%;
+				}
+
+				p {
+					padding-right: 20%;
+					line-height: 30px;
+				}
 			}
 		}
 	}
