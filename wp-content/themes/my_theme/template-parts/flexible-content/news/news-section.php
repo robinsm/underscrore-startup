@@ -93,22 +93,25 @@ if( get_row_layout() == 'news_section' ):
 
             </div>
 
-            <?php
-            if(!empty($news_items_array)): 
-                for ($index = 0; $index < $num_recent_news_items_to_show; $index++) {    
-        ?>
-            <div class="most-recent-news-articles">
-                <?php display_news_article($news_items_array, $index); ?>
+            <div class="news-articles">
+
+                <?php
+                if(!empty($news_items_array)): 
+                    for ($index = 0; $index < $num_recent_news_items_to_show; $index++) {    
+            ?>
+                <div class="most-recent-news-article">
+                    <?php display_news_article($news_items_array, $index); ?>
+                </div>
+                <?php
+                    } 
+                endif;
+            ?>
             </div>
-            <?php
-                } 
-            endif;
-        ?>
 
         </div>
     </section>
 
-    <section class=" older-news-section">
+    <section class="older-news-section">
         <div class="wide-container">
             <div class="older-news">
                 <div class="older-news-title">
@@ -120,17 +123,21 @@ if( get_row_layout() == 'news_section' ):
 
             </div>
 
-            <?php
-            if(!empty($news_items_array)): 
-                for ($index = $num_recent_news_items_to_show; $index <= count($news_items_array) - 1; $index++) {    
+            <div class="news-articles">
+                <?php
+                    if(!empty($news_items_array)): 
+                        for ($index = $num_recent_news_items_to_show; $index <= count($news_items_array) - 1; $index++) {    
         ?>
-            <div class="most-recent-news-articles">
-                <?php display_news_article($news_items_array, $index); ?>
+
+                <div class="older-news-article">
+                    <?php display_news_article($news_items_array, $index); ?>
+                </div>
+                <?php
+                    } 
+                endif;
+            ?>
             </div>
-            <?php
-                } 
-            endif;
-        ?>
+
 
         </div>
     </section>
