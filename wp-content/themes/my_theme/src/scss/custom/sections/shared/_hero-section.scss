@@ -1,5 +1,5 @@
 .hero_section {
-	background-color: #395e95;
+	background-color: #476aa2;
 
 	.wide-container {
 		display: flex;
@@ -12,6 +12,9 @@
 		padding: 120px 0px;
 
 		.illustration {
+			video {
+				max-width: 100%;
+			}
 		}
 
 		.title_and_subtitle {
