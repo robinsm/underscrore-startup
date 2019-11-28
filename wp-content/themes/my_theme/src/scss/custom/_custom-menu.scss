@@ -1,205 +1,207 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
-li,
-a {
-  font-family: $font__secondary;
-  font-size: 18px;
-  color: $color__text-menu-main;
-  text-decoration: none;
+.main-navigation {
+	li,
+	a {
+		font-family: $font__secondary;
+		font-size: 18px;
+		color: $color__text-menu-main;
+		text-decoration: none;
+	}
 }
 
 .site-header {
-  display: flex;
-  align-items: center;
-  min-height: 94px;
-  background-color: #fff;
-  width: 80%;
-  max-width: 1920px;
-  margin: auto;
+	display: flex;
+	align-items: center;
+	min-height: 94px;
+	background-color: #fff;
+	width: 80%;
+	max-width: 1920px;
+	margin: auto;
 }
 
 .logo {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 nav {
-  // we want our languages on the same row
-  display: flex;
-  margin-left: auto;
+	// we want our languages on the same row
+	display: flex;
+	margin-left: auto;
 }
 
 .nav__links,
 .nav__links__language {
-  list-style-type: none;
-  margin-block-start: 0px;
-  margin-block-end: 0px;
+	list-style-type: none;
+	margin-block-start: 0px;
+	margin-block-end: 0px;
 
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
 
-  padding-inline-start: 0px;
+	padding-inline-start: 0px;
 
-  li {
-    display: inline-block;
-    padding: 0 14px;
+	li {
+		display: inline-block;
+		padding: 0 14px;
 
-    &.current-menu-item {
-      a,
-      a:visited {
-        color: $color__text-menu-main-hover;
-      }
-    }
+		&.current-menu-item {
+			a,
+			a:visited {
+				color: $color__text-menu-main-hover;
+			}
+		}
 
-    a {
-      transition: all 0.3s ease 0s;
-      font-size: 0.8rem;
+		a {
+			transition: all 0.3s ease 0s;
+			font-size: 0.8rem;
 
-      &:visited {
-        color: $color__text-menu-main;
-      }
+			&:visited {
+				color: $color__text-menu-main;
+			}
 
-      &:hover {
-        color: $color__text-menu-main-hover;
-      }
-    }
-  }
+			&:hover {
+				color: $color__text-menu-main-hover;
+			}
+		}
+	}
 }
 
 .nav__links__language {
-  margin-left: 3rem;
-  li {
-    padding: 0 2px;
-  }
+	margin-left: 3rem;
+	li {
+		padding: 0 2px;
+	}
 }
 
 /* hamburger */
 .mobile__menu {
-  display: none;
+	display: none;
 }
 
 .hamburger {
-  position: absolute;
-  width: 35px;
-  height: 35px;
-  top: 10px;
-  right: 10%;
-  z-index: 5;
-  cursor: pointer;
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	top: 10px;
+	right: 10%;
+	z-index: 5;
+	cursor: pointer;
 
-  div {
-    position: relative;
-    width: 35px;
-    height: 3px;
-    border-radius: 3px;
-    background-color: #ecf0f1;
-    margin-top: 10px;
-    transition: all 0.3s ease-in-out;
-  }
+	div {
+		position: relative;
+		width: 35px;
+		height: 3px;
+		border-radius: 3px;
+		background-color: #ecf0f1;
+		margin-top: 10px;
+		transition: all 0.3s ease-in-out;
+	}
 }
 
 #toggle {
-  display: none;
+	display: none;
 }
 
 #toggle:checked + .hamburger .hamburger__top {
-  transform: rotate(-45deg);
-  margin-top: 17.5px; /* Half the size of the hamburger height */
+	transform: rotate(-45deg);
+	margin-top: 17.5px; /* Half the size of the hamburger height */
 }
 
 #toggle:checked + .hamburger .hamburger__meat {
-  transform: rotate(45deg);
-  margin-top: -3px; /* Negative value of hamburger div height*/
+	transform: rotate(45deg);
+	margin-top: -3px; /* Negative value of hamburger div height*/
 }
 
 #toggle:checked + .hamburger .hamburger__bottom {
-  transform: scale(0); /* hide it */
+	transform: scale(0); /* hide it */
 }
 
 #toggle:checked + .hamburger + .hamburger__nav {
-  top: 0;
+	top: 0;
 }
 
 .hamburger__nav {
-  position: fixed;
-  z-index: 4;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-  top: -100%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
+	position: fixed;
+	z-index: 4;
+	width: 100%;
+	height: 100%;
+	background-color: #ffffff;
+	top: -100%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	transition: all 0.3s ease-in-out;
 }
 
 .hamburger__nav .hamburger__nav__wrapper {
-  position: relative;
-  overflow-y: auto;
-  height: 100%;
+	position: relative;
+	overflow-y: auto;
+	height: 100%;
 }
 
 .hamburger__nav__items {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid red;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid red;
 
-  ul {
-    list-style-type: none;
-    margin-block-start: 0px;
-    margin-block-end: 0px;
+	ul {
+		list-style-type: none;
+		margin-block-start: 0px;
+		margin-block-end: 0px;
 
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+		margin-inline-start: 0px;
+		margin-inline-end: 0px;
 
-    padding-inline-start: 0px;
+		padding-inline-start: 0px;
 
-    li {
-      padding: 10px 0;
-      font-size: 0.8rem;
+		li {
+			padding: 10px 0;
+			font-size: 0.8rem;
 
-      &.current-menu-item {
-        a,
-        a:visited {
-          color: $color__text-menu-main-hover;
-        }
-      }
+			&.current-menu-item {
+				a,
+				a:visited {
+					color: $color__text-menu-main-hover;
+				}
+			}
 
-      a {
-        font-size: 0.8rem;
-        display: block;
-        text-align: center;
-        &:visited {
-          color: $color__text-menu-main;
-        }
+			a {
+				font-size: 0.8rem;
+				display: block;
+				text-align: center;
+				&:visited {
+					color: $color__text-menu-main;
+				}
 
-        &:hover {
-          color: $color__text-menu-main-hover;
-        }
-      }
-    }
-  }
+				&:hover {
+					color: $color__text-menu-main-hover;
+				}
+			}
+		}
+	}
 }
 
 ul.hamburger__nav__items__language {
-  display: flex;
-  flex-direction: row;
-  margin-top: 15%;
+	display: flex;
+	flex-direction: row;
+	margin-top: 15%;
 
-  li {
-    padding: 0px 10px;
-  }
+	li {
+		padding: 0px 10px;
+	}
 }
 
 @media screen and (max-width: 1000px) {
-  .mobile__menu {
-    display: inherit;
-  }
-  .nav__links,
-  .nav__links__language {
-    display: none;
-  }
+	.mobile__menu {
+		display: inherit;
+	}
+	.nav__links,
+	.nav__links__language {
+		display: none;
+	}
 }

@@ -23,8 +23,10 @@
 		}
 	}
 
-	.most-recent-news-articles,
-	.older-news-articles {
+	.most-recent-news-article,
+	.older-news-article {
+		padding: 30px 0px;
+
 		.title {
 			font-size: 28px;
 			font-family: $font__secondary;
@@ -39,6 +41,54 @@
 		.publish-date {
 			font-size: 12px;
 			color: #a1a8b3;
+		}
+
+		.link {
+			margin-top: 20px;
+			font-size: 12px;
+		}
+	}
+
+	// Large devices (desktops, 992px and up)
+	@media (min-width: 992px) {
+		// on bigger resolutions, we want the services laid out in a row.
+
+		.most-recent-news,
+		.older-news {
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: flex-end;
+
+			.most-recent-news-image,
+			.older-news-image {
+				margin-top: 0px;
+				max-width: 50%;
+			}
+
+			.most-recent-news-title,
+			.older-news-title {
+				display: flex;
+				flex-grow: 1;
+
+				h2 {
+					margin-left: 50px;
+
+					color: #89929f;
+					font-weight: 400;
+					font-size: 52px;
+					line-height: 68px;
+				}
+			}
+		}
+
+		.news-articles {
+			display: flex;
+			flex-wrap: wrap;
+			.most-recent-news-article,
+			.older-news-article {
+				flex-basis: 33%;
+				padding-right: 30px;
+			}
 		}
 	}
 }
