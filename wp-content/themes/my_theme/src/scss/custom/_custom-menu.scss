@@ -64,14 +64,25 @@ nav {
 				color: $color__text-menu-main-hover;
 			}
 		}
+
+		&.wpml-ls-menu-item {
+			padding: 0 2px;
+		}
+
+		// if we have a WPML language switcher class and it does NOT have an adjascent class
+		// that defines it as the current language, then we should grey it out so the user can
+		// visualise the current language.
+		&.wpml-ls-menu-item + :not(.wpml-ls-current-language) {
+			a,
+			a:visited {
+				color: #a1a8b3;
+			}
+		}
 	}
 }
 
-.nav__links__language {
+.wpml-ls-first-item {
 	margin-left: 3rem;
-	li {
-		padding: 0 2px;
-	}
 }
 
 /* hamburger */
