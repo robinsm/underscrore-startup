@@ -15,7 +15,7 @@
 
 			.service_padding {
 				padding: 100px 0px;
-				min-height: 400px;
+				min-height: 500px;
 
 				.on_hover {
 					display: none;
@@ -54,6 +54,21 @@
 
 			.service {
 				.service_padding {
+					min-height: 300px;
+					.title {
+						padding-bottom: 150px;
+					}
+				}
+			}
+		}
+	}
+
+	// Extra large devices (large desktops, 1200px and up)
+	@media (min-width: 1200px) {
+		a {
+			.service {
+				.service_padding {
+					min-height: 500px;
 					.title {
 						padding-bottom: 250px;
 					}
