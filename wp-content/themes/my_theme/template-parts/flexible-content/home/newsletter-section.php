@@ -17,6 +17,7 @@ if( get_row_layout() == 'newsletter_section' ):
             }
             
             $message = get_sub_field('message');
+            $ninja_forms_id = get_sub_field('ninja_forms_id');
         ?>
 
         <div class="illustration">
@@ -29,7 +30,9 @@ if( get_row_layout() == 'newsletter_section' ):
             </div>
 
             <!-- Call plugin to insert newsletter signup form -->
-            <?php nsu_form(); ?>
+            <?php
+                echo do_shortcode("[ninja_form id=" . $ninja_forms_id . "]");        
+            ?>
 
         </div>
 
