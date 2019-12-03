@@ -13,6 +13,9 @@
 
 			color: white;
 
+			// center the background image if it overflows the container.
+			background-position: 50%;
+
 			.service_padding {
 				padding: 100px 0px;
 				min-height: 500px;
