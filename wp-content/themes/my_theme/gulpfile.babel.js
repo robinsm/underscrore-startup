@@ -21,7 +21,15 @@ export const styles = () => {
 		.pipe(gulpif(!PRODUCTION, sourcemaps.init()))
 		.pipe(sass().on('error', sass.logError))
 		.pipe(gulpif(PRODUCTION, postcss([autoprefixer])))
-		.pipe(gulpif(PRODUCTION, cleanCss({ compatibility: 'ie8' })))
+		.pipe(
+			gulpif(
+				PRODUCTION,
+				cleanCss({ compatibility: 'ie8', debug: true }, details => {
+					console.log(`${details.name}: ${details.stats.originalSize}`);
+					console.log(`${details.name}: ${details.stats.minifiedSize}`);
+				})
+			)
+		)
 		.pipe(gulpif(!PRODUCTION, sourcemaps.write()))
 		.pipe(dest('dist/css'));
 };
