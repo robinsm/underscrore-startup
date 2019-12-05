@@ -42,16 +42,6 @@
                             'menu_class' => 'nav__links',
                         ));
                     ?>
-                <!--
-                <ul class="nav__links__language">
-                    <li id="" class="">
-                        <a href="/">EN</a></li>
-                    <li id="" class="">
-                        <a href="/fr">FR</a></li>
-                    <li id="" class="">
-                        <a href="/de">DE</a></li>
-                    </li>
-                </ul>-->
             </nav>
 
             <div class="mobile__menu">
@@ -72,18 +62,6 @@
                                         'menu_id' => 'primary-menu',
                                     ));
                                 ?>
-
-                            <!--
-                            <ul class="hamburger__nav__items__language">
-                                <li id="" class="">
-                                    <a href="/">EN</a></li>
-                                <li id="" class="">
-                                    <a href="/fr">FR</a></li>
-                                <li id="" class="">
-                                    <a href="/de">DE</a></li>
-                                </li>
-                            </ul>-->
-
                         </nav>
 
 
