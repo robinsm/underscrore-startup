@@ -1,3 +1,7 @@
+.sidebar {
+	display: none;
+}
+
 section.image {
 	.map_section {
 		img {
@@ -84,17 +88,22 @@ section.form {
 }
 
 // Large devices (desktops, 992px and up)
-/* @media (min-width: 992px) {
-	display: flex;
-	section.image {
-		order: 2;
-	}
+@media (min-width: 992px) {
+	.body {
+		display: flex;
+		flex-direction: row;
 
-	section.contact {
-		order: 1;
-	}
+		.sidebar {
+			display: block;
+			flex-basis: 30%;
+			background-color: #edf0f5;
+		}
 
-	section.form {
-		order: 3;
+		.main {
+			flex-basis: 70%;
+			section.contact {
+				display: none;
+			}
+		}
 	}
-} */
+}
