@@ -1,9 +1,10 @@
 <?php
 if( get_row_layout() == 'map_section' ):
 ?>
-<div class="map_section">
+<section class="image">
+    <div class="map_section">
 
-    <?php 
+        <?php 
 
             $map_image = get_sub_field('map_image');
 
@@ -17,11 +18,9 @@ if( get_row_layout() == 'map_section' ):
             
         ?>
 
-    <div class="wide-container">
-        <div class="map-image">
-            <img src="<?php echo $map_image_url;?>" alt="<?php echo $map_image_alt;?>" />
-        </div>
-    </div>
+        <img src="<?php echo $map_image_url;?>" alt="<?php echo $map_image_alt;?>" />
 
-</div>
+    </div>
+</section>
+
 <?php endif; ?>
