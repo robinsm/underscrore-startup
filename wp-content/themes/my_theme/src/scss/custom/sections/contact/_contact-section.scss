@@ -23,6 +23,12 @@ section.contact {
 			margin: 30px;
 
 			.contact_icon_container {
+				margin-top: 5px;
+				min-width: 32px;
+				.icon {
+					img {
+					}
+				}
 			}
 
 			.contact_detail_container {
@@ -74,6 +80,12 @@ section.form {
 					-webkit-border-radius: 0px;
 					border-radius: 0px;
 					width: 100%;
+				}
+
+				// override the background color of the inputs specified by ninja forms
+				input:not([type='button']),
+				textarea {
+					background-color: #ffffff;
 				}
 
 				// Medium devices (tablets, 768px and up)

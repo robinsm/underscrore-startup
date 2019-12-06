@@ -1,13 +1,14 @@
 <?php
 
-if (have_rows('flexible_content_contact_page')):
+if ( have_rows( 'flexible_content_contact_page' ) ) :
 
-    while (have_rows('flexible_content_contact_page')) : the_row();
+	while ( have_rows( 'flexible_content_contact_page' ) ) :
+		the_row();
 
-        // Load flexible modules here
-        require('shared/hero-section.php');
-        require('contact/contact-section.php');
+		// Load flexible modules here
+		require 'shared/hero-section.php';
+		require 'contact/contact-section.php';
 
-    endwhile;
+	endwhile;
 
 endif;
