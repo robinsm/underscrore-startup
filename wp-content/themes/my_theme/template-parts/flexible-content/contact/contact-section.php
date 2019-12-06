@@ -30,9 +30,36 @@
 			$contact_repeater_item->body       = get_sub_field( 'body' );
 
 			// pushing the same object over and over and over to the array.
-			$contact_repeater_array[] = $contact_repeater_item;
+			$contact_section->$contact_repeater_array[] = $contact_repeater_item;
 		endwhile;
 	endif;
+
+	function display_contact_items( $contact_section ) {
+
+		if ( ! empty( $contact_section->$contact_repeater_array ) ) :
+			foreach ( $contact_section->$contact_repeater_array as $item ) {
+				?>
+
+					<div class="contact_item">
+						<div class="contact_icon_container">
+							<div class="icon">
+								<img src="<?php echo esc_url( $item->icon_image ); ?>" alt=""/>
+							</div>
+						</div>
+						<div class="contact_detail_container">
+							<div class="title">
+								<?php echo esc_html( $item->title ); ?>
+							</div>
+							<div class="body">
+								<?php echo esc_html( $item->body ); ?>
+							</div>
+						</div>
+					</div>
+
+				<?php
+			}
+		endif;
+	}
 
 	?>
 
@@ -43,32 +70,8 @@
 
 				<div class="contact_section wide-container">
 
-					<?php
-					if ( ! empty( $contact_repeater_array ) ) :
-						for ( $index = 0; $index < count( $contact_repeater_array ); $index++ ) {
-							?>
-
-							<div class="contact_item">
-								<div class="contact_icon_container">
-									<div class="icon">
-										<img src="<?php echo esc_url( $contact_repeater_array[ $index ]->icon_image ); ?>" alt=""/>
-									</div>
-								</div>
-								<div class="contact_detail_container">
-									<div class="title">
-										<?php echo esc_html( $contact_repeater_array[ $index ]->title ); ?>
-									</div>
-									<div class="body">
-										<?php echo esc_html( $contact_repeater_array[ $index ]->body ); ?>
-									</div>
-								</div>
-							</div>
-
-							<?php
-						}
-						endif;
-					?>
-
+				<?php echo esc_html( display_contact_items( $contact_section ) ); ?>
+					
 				</div>
 			</section>
 		</div>
@@ -78,8 +81,8 @@
 				<div class="map_section">
 
 					<?php if ( ! empty( $contact_section->map_image ) ) : ?>
-						<img src="<?php echo $contact_section->map_image['url']; ?>"
-							 alt="<?php echo $contact_section->map_image['alt']; ?>"/>
+						<img src="<?php echo esc_html( $contact_section->map_image['url'] ); ?>"
+							 alt="<?php echo esc_html( $contact_section->map_image['alt'] ); ?>"/>
 					<?php endif; ?>
 
 				</div>
@@ -89,43 +92,8 @@
 
 				<div class="contact_section wide-container">
 
-					<?php
-					if ( have_rows( 'contact_repeater' ) ) :
-
-						while ( have_rows( 'contact_repeater' ) ) :
-							the_row();
-
-							$icon = get_sub_field( 'icon' );
-
-							if ( ! empty( $icon ) ) {
-								$icon_url   = $icon['url'];
-								$icon_title = $icon['title'];
-								$icon_alt   = $icon['alt'];
-								$icon_size  = 'large';
-								$icon_large = $icon['sizes'][ $icon_size ];
-							}
-
-							$title = get_sub_field( 'title' );
-							$body  = get_sub_field( 'body' );
-							?>
-
-							<div class="contact_item">
-								<div class="contact_icon_container">
-									<div class="icon">
-										<img src="<?php echo $icon_url; ?>" alt=""/>
-									</div>
-								</div>
-								<div class="contact_detail_container">
-									<div class="title">
-										<?php echo $title; ?>
-									</div>
-									<div class="body">
-										<?php echo $body; ?>
-									</div>
-								</div>
-							</div>
-						<?php endwhile; ?>
-					<?php endif; ?>
+					<?php echo esc_html( display_contact_items( $contact_section ) ); ?>
+					
 				</div>
 			</section>
 
@@ -134,7 +102,7 @@
 
 					<div class="form">
 						<div class="message">
-							<?php echo $contact_section->message; ?>
+							<?php echo esc_html( $contact_section->message ); ?>
 						</div>
 
 						<!-- Call plugin to insert newsletter signup form -->
@@ -146,6 +114,5 @@
 			</section>
 		</div>
 	</div>
-
 
 <?php endif; ?>
