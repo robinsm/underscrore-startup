@@ -21,7 +21,8 @@
 	$contact_section->ninja_forms_id = get_sub_field( 'ninja_forms_id' );
 
 	if ( have_rows( 'contact_repeater' ) ) :
-		while ( have_rows( 'contact_repeater' ) ) :
+
+		while ( have_rows( ' contact_repeater ' ) ) :
 			the_row();
 
 			$contact_repeater_item             = new ContactRepeaterItem();
@@ -34,8 +35,8 @@
 		endwhile;
 	endif;
 
-	?>
 
+	?>
 
 	<div class="body">
 		<div class="sidebar">
@@ -56,10 +57,10 @@
 								</div>
 								<div class="contact_detail_container">
 									<div class="title">
-										<?php echo esc_html( $contact_repeater_array[ $index ]->title ); ?>
+										<?php echo $contact_repeater_array[ $index ]->title; ?>
 									</div>
 									<div class="body">
-										<?php echo esc_html( $contact_repeater_array[ $index ]->body ); ?>
+										<?php echo $contact_repeater_array[ $index ]->body; ?>
 									</div>
 								</div>
 							</div>
@@ -69,6 +70,43 @@
 						endif;
 					?>
 
+					<?php
+					if ( have_rows( 'contact_repeater' ) ) :
+
+						while ( have_rows( 'contact_repeater' ) ) :
+							the_row();
+
+							$icon = get_sub_field( 'icon' );
+
+							if ( ! empty( $icon ) ) {
+								$icon_url   = $icon['url'];
+								$icon_title = $icon['title'];
+								$icon_alt   = $icon['alt'];
+								$icon_size  = 'large';
+								$icon_large = $icon['sizes'][ $icon_size ];
+							}
+
+							$title = get_sub_field( 'title' );
+							$body  = get_sub_field( 'body' );
+							?>
+
+							<div class="contact_item">
+								<div class="contact_icon_container">
+									<div class="icon">
+										<img src="<?php echo esc_url( $icon_url ); ?>" alt=""/>
+									</div>
+								</div>
+								<div class="contact_detail_container">
+									<div class="title">
+										<?php echo esc_html( $title ); ?>
+									</div>
+									<div class="body">
+										<?php echo esc_html( $body ); ?>
+									</div>
+								</div>
+							</div>
+						<?php endwhile; ?>
+					<?php endif; ?>
 				</div>
 			</section>
 		</div>
