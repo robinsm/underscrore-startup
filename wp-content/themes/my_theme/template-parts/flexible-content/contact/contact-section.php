@@ -43,7 +43,7 @@
 					<div class="contact_item">
 						<div class="contact_icon_container">
 							<div class="icon">
-								<img src="<?php echo esc_url( $item->icon_image ); ?>" alt=""/>
+								<img src="<?php echo esc_url( $item->icon_image['url'] ); ?>" alt=""/>
 							</div>
 						</div>
 						<div class="contact_detail_container">
