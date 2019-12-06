@@ -1,14 +1,14 @@
 <?php
 
-if( have_rows('flexible_content_services_page') ):
-    
-	    while ( have_rows('flexible_content_services_page') ) : the_row();
+if (have_rows('flexible_content_services_page')):
 
-			// Load flexible modules here
-			require('shared/hero-section.php');
-			require('services/services-section.php');
-			require('services/single-services-section.php');
+    while (have_rows('flexible_content_services_page')) : the_row();
 
-	    endwhile;
-	
+        // Load flexible modules here
+        require('shared/hero-section.php');
+        require('services/services-section.php');
+        require('services/single-services-section.php');
+
+    endwhile;
+
 endif;
