@@ -13,6 +13,22 @@
 
 		color: #6e7a8b;
 
+		.on_hover {
+			display: none;
+		}
+
+		// hide the '|' svg and display the '+' svg
+		&:hover {
+			cursor: pointer;
+
+			.symbol {
+				display: none;
+			}
+			.on_hover {
+				display: block;
+			}
+		}
+
 		a {
 			font-family: $font__secondary;
 			transition: all 0.3s ease 0s;

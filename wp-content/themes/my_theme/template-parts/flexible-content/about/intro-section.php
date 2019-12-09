@@ -8,7 +8,7 @@
 				$title = get_sub_field( 'title' );
 				?>
 				<div class="title">
-					<h1><?php echo esc_html( $title ); ?></h1>
+					<h2><?php echo esc_html( $title ); ?></h2>
 				</div>
 
 				<?php if ( have_rows( 'active_areas_repeater' ) ) : ?>
@@ -21,7 +21,6 @@
 							<div class="area">
 								<div class="vertical_bar">|</div>
 								<div class="area-text"><?php echo esc_html( $area ); ?></div>
-
 							</div>
 
 						<?php endwhile; ?>
@@ -30,7 +29,7 @@
 
 				<?php $body = get_sub_field( 'body' ); ?>
 				<div class="body">
-					<?php echo $body; ?>
+					<p><?php echo $body; ?></p>
 				</div>
 			</div>
 
@@ -53,7 +52,7 @@
 						?>
 
 						<div class="icon">
-							<img src="<?php echo esc_url( $icon_url ); ?>" alt="" width="88" height="88"/>
+							<img src="<?php echo esc_url( $icon_url ); ?>" alt="" />
 						</div>
 
 					<?php endwhile; ?>

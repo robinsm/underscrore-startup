@@ -32,6 +32,12 @@
 
 .logo {
 	cursor: pointer;
+	max-width: 80%;
+
+	// Medium devices (tablets, 768px and up)
+	@media (min-width: 768px) {
+		max-width: 100%;
+	}
 }
 
 nav {
@@ -97,7 +103,7 @@ nav {
 	position: absolute;
 	width: 35px;
 	height: 35px;
-	top: 10px;
+	top: 20px;
 	right: 10%;
 	z-index: 5;
 	cursor: pointer;
@@ -107,7 +113,7 @@ nav {
 		width: 35px;
 		height: 3px;
 		border-radius: 3px;
-		background-color: #ecf0f1;
+		background-color: #002d72;
 		margin-top: 10px;
 		transition: all 0.3s ease-in-out;
 	}

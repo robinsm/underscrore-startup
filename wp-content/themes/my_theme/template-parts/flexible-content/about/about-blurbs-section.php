@@ -38,7 +38,7 @@
 							<h2 class="secondary_font"><?php echo esc_html( $subtitle ); ?></h2>
 						</div>
 						<div class="body">
-							<?php echo $body; ?>
+							<p><?php echo $body; ?></p>
 						</div>
 
 					</div>
