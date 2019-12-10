@@ -5,9 +5,10 @@
 	justify-content: center;
 
 	.intro_copy {
-		h1 {
+		h2 {
 			color: #89929f;
 			font-weight: 400;
+			font-size: 3.1rem;
 		}
 
 		.active_areas {
@@ -43,6 +44,21 @@
 
 		.icon {
 			margin: 80px 0px;
+			img {
+				height: 32px;
+			}
+		}
+	}
+
+	// Medium devices (tablets, 768px and up)
+	@media (min-width: 768px) {
+		.active_areas {
+			display: flex;
+			flex-wrap: wrap;
+
+			.area {
+				flex-basis: 50%;
+			}
 		}
 	}
 

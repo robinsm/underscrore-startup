@@ -10,9 +10,12 @@
 			min-height: 300px;
 			text-align: center;
 
-			font-size: 24px;
 			text-transform: uppercase;
 			color: #fff;
+
+			h2 {
+				font-size: 1.75rem;
+			}
 		}
 
 		.body_section {
@@ -28,6 +31,10 @@
 			.subtitle {
 				width: 80%;
 				color: #6e7a8b;
+
+				h2 {
+					font-size: 1.4rem;
+				}
 			}
 
 			.body {
