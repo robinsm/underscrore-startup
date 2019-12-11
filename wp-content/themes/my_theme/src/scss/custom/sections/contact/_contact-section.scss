@@ -72,14 +72,20 @@ section.form {
 
 				input[type='button'] {
 					padding: 15px 15px;
-					background: #ff8f1c;
-					color: white;
+					background-color: #fff;
+					color: #ff8f1c;
+					border-color: #ff8f1c;
 					text-transform: uppercase;
-					border: 0 none;
+					border: #ff8f1c solid 2px;
 					cursor: pointer;
 					-webkit-border-radius: 0px;
 					border-radius: 0px;
 					width: 100%;
+
+					&:hover {
+						color: #fff;
+						background-color: #ff8f1c;
+					}
 				}
 
 				// override the background color of the inputs specified by ninja forms

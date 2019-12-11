@@ -1,19 +1,22 @@
 <?php if ( get_row_layout() == 'contact_section' ) :
 
-	class ContactSection {
-
-		public $contact_repeater_array = array();
-		public $map_image;
-		public $message;
-		public $ninja_forms_id;
-	}
-
 	class ContactRepeaterItem {
 
 		public $icon_image;
 		public $title;
 		public $body;
 	}
+
+	class ContactSection {
+
+		public $contact_repeater_array;
+		public $map_image;
+		public $message;
+		public $ninja_forms_id;
+
+	}
+
+
 
 	$contact_section                 = new ContactSection();
 	$contact_section->map_image      = get_sub_field( 'map_image' );
@@ -34,10 +37,10 @@
 		endwhile;
 	endif;
 
-	function display_contact_items( $contact_section ) {
+	function display_contact_items( $_contact_section ) {
 
-		if ( ! empty( $contact_section->$contact_repeater_array ) ) :
-			foreach ( $contact_section->$contact_repeater_array as $item ) {
+		if ( ! empty( $_contact_section->$contact_repeater_array ) ) :
+			foreach ( $_contact_section->$contact_repeater_array as $item ) {
 				?>
 
 					<div class="contact_item">
