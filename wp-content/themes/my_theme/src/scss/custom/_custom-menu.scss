@@ -14,7 +14,6 @@
 	li,
 	a {
 		font-family: $font__secondary;
-		font-size: 18px;
 		color: $color__text-menu-main;
 		text-decoration: none;
 	}
@@ -75,7 +74,7 @@ nav {
 
 		a {
 			transition: all 0.3s ease 0s;
-			font-size: 0.8rem;
+			font-size: 0.94rem;
 
 			&:visited {
 				color: $color__text-menu-main;

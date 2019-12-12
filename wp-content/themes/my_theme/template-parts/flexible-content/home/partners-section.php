@@ -22,7 +22,9 @@ if ( get_row_layout() == 'partners_section' ) :
 				while ( have_rows( 'partners_repeater' ) ) :
 					the_row();
 
-					$icon = get_sub_field( 'icon' );
+					$icon        = get_sub_field( 'icon' );
+					$icon_height = get_sub_field( 'icon_height' );
+
 
 					if ( ! empty( $icon ) ) {
 						$icon_url   = $icon['url'];
@@ -34,7 +36,7 @@ if ( get_row_layout() == 'partners_section' ) :
 					?>
 
 					<div class="partner">
-						<img src="<?php echo esc_url( $icon_url ); ?>" alt=""/>
+						<img src="<?php echo esc_url( $icon_url ); ?>" alt="" style="height: <?php echo $icon_height; ?>px"/>
 					</div>
 
 				<?php endwhile; ?>
