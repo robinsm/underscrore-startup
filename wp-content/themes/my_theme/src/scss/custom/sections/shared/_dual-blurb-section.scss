@@ -13,8 +13,13 @@
 			text-transform: uppercase;
 			color: #fff;
 
+			// center the background image if it overflows the container.
+			background-position: 50%;
+
 			h2 {
 				font-size: 1.75rem;
+
+				margin: 0px 20%;
 			}
 		}
 
