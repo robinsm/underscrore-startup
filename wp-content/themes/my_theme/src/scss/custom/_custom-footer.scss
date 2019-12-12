@@ -19,6 +19,9 @@
 		flex-direction: column;
 
 		.footer_logo {
+			display: flex;
+			justify-content: center;
+			// max-width: 100%;
 		}
 
 		.footer_menu {
@@ -42,6 +45,7 @@
 					a,
 					a:visited {
 						color: #fff;
+						opacity: 0.4;
 					}
 
 					a {

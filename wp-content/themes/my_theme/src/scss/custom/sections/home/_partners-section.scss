@@ -1,86 +1,84 @@
 .partners_section {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-  background-color: #002d72;
+	background-color: #002d72;
 
-  .partners_intro {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    align-items: center;
+	.partners_intro {
+		display: flex;
+		flex-direction: column;
+		color: white;
+		align-items: center;
 
-    margin-top: 48px;
+		margin-top: 48px;
 
-    h2 {
-      margin-top: 0px;
-      text-transform: uppercase;
-    }
+		h2 {
+			margin-top: 0px;
+			text-transform: uppercase;
+		}
 
-    p {
-      text-align: center;
-    }
+		p {
+			text-align: center;
+		}
 
-    // Large devices (desktops, 992px and up)
-    @media (min-width: 992px) {
-      p {
-        max-width: 50%;
-        line-height: 1.8;
-      }
-    }
-  }
+		// Large devices (desktops, 992px and up)
+		@media (min-width: 992px) {
+			p {
+				max-width: 50%;
+				line-height: 1.8;
+			}
+		}
+	}
 
-  .partners {
-    display: flex;
-    // on mobile, we want a vertical column
-    flex-direction: column;
-    min-height: 200px;
+	.partners {
+		display: flex;
+		// on mobile, we want a vertical column
+		flex-direction: column;
+		min-height: 200px;
 
-    .partner {
-      display: flex;
-      flex-direction: column;
-      // flex-basis: 100%;
-      flex: 1;
-      min-height: 200px;
-      align-items: center;
-      justify-content: center;
+		.partner {
+			display: flex;
+			flex-direction: column;
+			// flex-basis: 100%;
+			flex: 1;
+			min-height: 200px;
+			align-items: center;
+			justify-content: center;
 
-      color: white;
+			color: white;
+		}
 
-      img {
-        height: 40px;
-      }
-    }
+		// Medium devices (tablets, 768px and up)
+		@media (min-width: 768px) {
+			// on ipad resolutions, we want the partners laid out in a 2by2 grid
+			flex-direction: row;
+			flex-wrap: wrap;
 
-    // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) {
-      // on ipad resolutions, we want the partners laid out in a 2by2 grid
-      flex-direction: row;
-      flex-wrap: wrap;
+			margin-bottom: 40px;
 
-      .partner {
-        flex-basis: 50%;
-      }
-    }
+			.partner {
+				flex-basis: 50%;
+			}
+		}
 
-    // Large devices (desktops, 992px and up)
-    @media (min-width: 992px) {
-      // on desktop resolutions, we want the partners laid out in a row
-      // so we need to
-      // - disable the wrapping applied at smaller resolutions
-      // - set flex-basis back to 100%
-      flex-direction: row;
-      flex-wrap: nowrap;
+		// Large devices (desktops, 992px and up)
+		@media (min-width: 992px) {
+			// on desktop resolutions, we want the partners laid out in a row
+			// so we need to
+			// - disable the wrapping applied at smaller resolutions
+			// - set flex-basis back to 100%
+			flex-direction: row;
+			flex-wrap: nowrap;
 
-      .partners_intro {
-        p {
-          max-width: 50%;
-        }
-      }
+			.partners_intro {
+				p {
+					max-width: 50%;
+				}
+			}
 
-      .partner {
-        flex-basis: 100%;
-      }
-    }
-  }
+			.partner {
+				flex-basis: 100%;
+			}
+		}
+	}
 }
