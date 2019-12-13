@@ -65,6 +65,8 @@ export const scripts = () => {
 				devtool: !PRODUCTION ? 'inline-source-map' : false,
 				output: {
 					filename: 'bundle.js',
+					path: __dirname,
+					library: 'm56Library',
 				},
 			})
 		)

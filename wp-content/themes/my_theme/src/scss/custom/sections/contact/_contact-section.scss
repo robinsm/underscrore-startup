@@ -4,8 +4,13 @@
 
 section.image {
 	.map_section {
-		img {
-			display: block;
+		height: 400px;
+		// center the background image if it overflows the container.
+		background-position: 50%;
+
+		// Large devices (desktops, 992px and up)
+		@media (min-width: 992px) {
+			height: 500px;
 		}
 	}
 }
@@ -20,7 +25,12 @@ section.contact {
 		.contact_item {
 			display: flex;
 
-			margin: 30px;
+			margin: 30px 30px 30px 0px;
+
+			// Large devices (desktops, 992px and up)
+			@media (min-width: 992px) {
+				margin: 30px 30px 30px 30px;
+			}
 
 			.contact_icon_container {
 				margin-top: 5px;
@@ -40,8 +50,10 @@ section.contact {
 				}
 				.body {
 					color: #89929f;
-					font-size: 16px;
-					line-height: 28px;
+					p {
+						font-size: 1rem;
+						line-height: 1.5rem;
+					}
 				}
 			}
 		}
@@ -70,29 +82,9 @@ section.form {
 					color: #a1a8b3;
 				}
 
-				input[type='button'] {
-					padding: 15px 15px;
-					background-color: #fff;
-					color: #ff8f1c;
-					border-color: #ff8f1c;
-					text-transform: uppercase;
-					border: #ff8f1c solid 2px;
-					cursor: pointer;
-					-webkit-border-radius: 0px;
-					border-radius: 0px;
-					width: 100%;
-
-					&:hover {
-						color: #fff;
-						background-color: #ff8f1c;
-					}
-				}
-
-				// override the background color of the inputs specified by ninja forms
-				input:not([type='button']),
-				textarea {
-					background-color: #ffffff;
-				}
+				// call a mixin to apply general form styling
+				@include style-form-buttons;
+				@include style-form-inputs;
 
 				// Medium devices (tablets, 768px and up)
 				@media (min-width: 768px) {
