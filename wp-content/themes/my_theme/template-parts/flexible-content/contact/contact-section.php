@@ -16,8 +16,6 @@
 
 	}
 
-
-
 	$contact_section                 = new ContactSection();
 	$contact_section->map_image      = get_sub_field( 'map_image' );
 	$contact_section->message        = get_sub_field( 'message' );
@@ -33,14 +31,14 @@
 			$contact_repeater_item->body       = get_sub_field( 'body' );
 
 			// pushing the same object over and over and over to the array.
-			$contact_section->$contact_repeater_array[] = $contact_repeater_item;
+			$contact_section->contact_repeater_array[] = $contact_repeater_item;
 		endwhile;
 	endif;
 
 	function display_contact_items( $_contact_section ) {
 
-		if ( ! empty( $_contact_section->$contact_repeater_array ) ) :
-			foreach ( $_contact_section->$contact_repeater_array as $item ) {
+		if ( ! empty( $_contact_section->contact_repeater_array ) ) :
+			foreach ( $_contact_section->contact_repeater_array as $item ) {
 				?>
 
 					<div class="contact_item">
@@ -54,7 +52,7 @@
 								<?php echo esc_html( $item->title ); ?>
 							</div>
 							<div class="body">
-								<?php echo esc_html( $item->body ); ?>
+								<p><?php echo $item->body; ?></p>
 							</div>
 						</div>
 					</div>
@@ -65,7 +63,6 @@
 	}
 
 	?>
-
 
 	<div class="body">
 		<div class="sidebar">
@@ -81,14 +78,16 @@
 
 		<div class="main">
 			<section class="image">
-				<div class="map_section">
+				
+				<?php
+				if ( ! empty( $contact_section->map_image ) ) :
+					$style = "background-image: url('" . $contact_section->map_image['url'] . "'); background-size: cover; ";
+					?>
+					<div class="map_section" style="<?php echo $style; ?>">
 
-					<?php if ( ! empty( $contact_section->map_image ) ) : ?>
-						<img src="<?php echo esc_html( $contact_section->map_image['url'] ); ?>"
-							 alt="<?php echo esc_html( $contact_section->map_image['alt'] ); ?>"/>
-					<?php endif; ?>
+					</div>
+				<?php endif; ?> 
 
-				</div>
 			</section>
 
 			<section class="contact">

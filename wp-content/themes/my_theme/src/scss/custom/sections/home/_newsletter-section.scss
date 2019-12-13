@@ -26,7 +26,10 @@
 				background-color: #edf0f5;
 			}
 
-			input[type='button'] {
+			// call a mixin to apply general form styling
+			@include style-form-buttons;
+
+			/* 			input[type='button'] {
 				padding: 15px 15px;
 				background: #ff8f1c;
 				color: white;
@@ -37,7 +40,7 @@
 				-webkit-border-radius: 0px;
 				border-radius: 0px;
 				width: 100%;
-			}
+			} */
 		}
 
 		// Medium devices (tablets, 768px and up)

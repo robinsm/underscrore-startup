@@ -1,0 +1,47 @@
+@mixin style-form-buttons {
+	input[type='button'] {
+		padding: 15px 15px;
+		background-color: transparent;
+		color: #ff8f1c;
+		border-color: #ff8f1c;
+		text-transform: uppercase;
+		border: #ff8f1c solid 2px;
+		cursor: pointer;
+		-webkit-border-radius: 0px;
+		border-radius: 0px;
+		width: 100%;
+
+		&:hover {
+			color: #fff;
+			background-color: #ff8f1c;
+		}
+	}
+}
+
+@mixin style-form-inputs {
+	$placeholder-color: #a1a8b3;
+
+	input:not([type='button']),
+	textarea {
+		background: transparent;
+		border-left: 0px;
+		border-top: 0px;
+		border-right: 0px;
+	}
+
+	::placeholder {
+		/* Chrome, Firefox, Opera, Safari 10.1+ */
+		color: $placeholder-color;
+		opacity: 1; /* Firefox */
+	}
+
+	:-ms-input-placeholder {
+		/* Internet Explorer 10-11 */
+		color: $placeholder-color;
+	}
+
+	::-ms-input-placeholder {
+		/* Microsoft Edge */
+		color: $placeholder-color;
+	}
+}
