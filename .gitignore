@@ -101,4 +101,6 @@ wp-content/themes/my_theme/dist/
 # ignore node/grunt dependency directories
 node_modules/
 
-
+# ignore cypress/percy test videos directory
+wp-content/themes/my_theme/cypress/videos/*
+wp-content/themes/my_theme/cypress/screenshots/*
