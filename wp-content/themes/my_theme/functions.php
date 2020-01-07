@@ -46,6 +46,7 @@ if ( ! function_exists( 'my_theme_setup' ) ) :
 		register_nav_menus( array(
 			'header-menu' => esc_html__( 'Header Menu', 'my_theme' ),
 			'footer-menu' => esc_html__( 'Footer Menu', 'my_theme' ),
+			'mobile-language-menu' => esc_html__( 'Mobile Language Menu', 'my_theme' ),
 		) );
 
 		/*
