@@ -88,8 +88,22 @@ nav {
 }
 
 /* hamburger */
-.mobile__menu {
+.mobile__menu,
+.mobile__menu__telephone {
 	display: none;
+}
+
+.mobile__menu__telephone {
+	.icon {
+		position: absolute;
+		top: 36px;
+		right: 20%;
+
+		// Medium devices (tablets, 768px and up)
+		@media (min-width: 768px) {
+			right: 14%;
+		}
+	}
 }
 
 .hamburger {
@@ -214,6 +228,9 @@ ul.hamburger__nav__items__language {
 
 @media screen and (max-width: 1000px) {
 	.mobile__menu {
+		display: inherit;
+	}
+	.mobile__menu__telephone {
 		display: inherit;
 	}
 	.nav__links,

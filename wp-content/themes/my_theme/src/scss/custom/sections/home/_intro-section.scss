@@ -16,6 +16,13 @@
 
 	// Large devices (desktops, 992px and up)
 	@media (min-width: 992px) {
-		margin: 0 25%;
+		margin: 0 20%;
+
+		.intro {
+			margin: 90px 0px;
+			text-align: center;
+			color: #89929f;
+			line-height: 30px;
+		}
 	}
 }
