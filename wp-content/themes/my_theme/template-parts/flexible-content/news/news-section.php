@@ -64,7 +64,7 @@
 			?>
 
 			<div class="title">
-				<p><?php echo $news_items_array[ $index ]->title; ?></p>
+				<h2><?php echo $news_items_array[ $index ]->title; ?></h2>
 			</div>
 			<div class="body">
 				<p><?php echo $news_items_array[ $index ]->body; ?></p>

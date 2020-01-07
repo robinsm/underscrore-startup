@@ -28,13 +28,18 @@
 		padding: 30px 0px;
 
 		.title {
-			font-size: 28px;
-			font-family: $font__secondary;
-			color: #6e7a8b;
+			h2 {
+				font-size: 1.75rem;
+				font-family: $font__secondary;
+				color: #6e7a8b;
+			}
 		}
 
 		.body {
 			color: #89929f;
+			p {
+				margin-top: 0px;
+			}
 		}
 
 		.source,
@@ -46,6 +51,20 @@
 		.link {
 			margin-top: 20px;
 			font-size: 12px;
+		}
+	}
+
+	// Medium devices (tablets, 768px and up)
+	@media (min-width: 768px) {
+		.most-recent-news,
+		.older-news {
+			.most-recent-news-title,
+			.older-news-title {
+				h2 {
+					font-size: 3.25rem;
+					line-height: 4.25rem;
+				}
+			}
 		}
 	}
 
@@ -72,11 +91,6 @@
 
 				h2 {
 					margin-left: 50px;
-
-					color: #89929f;
-					font-weight: 400;
-					font-size: 52px;
-					line-height: 68px;
 				}
 			}
 		}
