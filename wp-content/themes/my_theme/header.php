@@ -44,6 +44,17 @@
                     ?>
             </nav>
 
+            <div class="mobile__menu__telephone">
+                <div class="icon">
+                    <a href="tel: +41 22 979 25 50">
+                        <img
+                            src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/icons/icon-tel.png"
+                            alt="telephone"
+                        />
+                    </a>
+                </div>
+            </div>
+
             <div class="mobile__menu">
                 <input id="toggle" type="checkbox" />
                 <label class="hamburger" for="toggle">
