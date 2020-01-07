@@ -45,3 +45,15 @@
 		color: $placeholder-color;
 	}
 }
+
+// if we have a WPML language switcher class and it does NOT have an adjascent class
+// that defines it as the current language, then we should grey it out so the user can
+// visualise the current language.
+@mixin highlight-current-language {
+	&.wpml-ls-item:not(.wpml-ls-current-language) {
+		a,
+		a:visited {
+			color: #a1a8b3;
+		}
+	}
+}

@@ -64,7 +64,16 @@
                                 ?>
                         </nav>
 
+                        <div class="mobile__nav__switcher">
 
+                            <?php
+                                wp_nav_menu(array(
+                                    'theme_location' => 'mobile-language-menu',
+                                    'menu_class' => 'mobile-language-menu',
+                                    'menu_id' => 'mobile-language-menu',
+                                ));
+                            ?>
+                        </div>
 
                     </div>
                 </div>
