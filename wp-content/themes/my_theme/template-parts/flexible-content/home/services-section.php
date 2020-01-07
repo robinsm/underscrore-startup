@@ -4,9 +4,11 @@
 		<?php
 		if ( have_rows( 'services_repeater' ) ) :
 
+			$loop_index = 0;
 			while ( have_rows( 'services_repeater' ) ) :
 				the_row();
 
+				$loop_index++;
 				$image = get_sub_field( 'image' );
 
 				if ( ! empty( $image ) ) {
@@ -31,7 +33,7 @@
 				}
 				?>
 
-				<a href="<?php echo $link; ?>">
+				<a href="<?php echo $link; ?>" data-cy="services-link-<?php echo $loop_index; ?>">
 					<div class="service" style="<?php echo $style; ?>">
 						<div class="service_padding">
 							<div class="title">
