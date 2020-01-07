@@ -23,17 +23,19 @@
 				?>
 
 				<div class="service">
-					<div class="symbol">
-						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/icons/vertical-line-dark.svg"
-							alt=""/>
-					</div>
-					<div class="on_hover">
-						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/icons/plus-dark.svg"
+					<a href="#<?php echo $counter; ?>">
+						<div class="symbol">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/icons/vertical-line-dark.svg"
 								alt=""/>
-					</div>
-					<div class="title">
-						<a href="#<?php echo $counter; ?>"><?php echo esc_html( $title ); ?></a>
-					</div>
+						</div>
+						<div class="on_hover">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/icons/plus-dark.svg"
+									alt=""/>
+						</div>
+						<div class="title">
+							<?php echo esc_html( $title ); ?>
+						</div>
+					</a>
 				</div>
 
 			<?php endwhile; ?>`
