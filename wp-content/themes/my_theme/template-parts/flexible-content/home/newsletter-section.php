@@ -5,14 +5,19 @@
 
 				<?php
 
-				$illustration = get_sub_field( 'illustration' );
+				$illustration_video_newsletter = get_sub_field( 'illustration_video_newsletter' );
+				$illustration_newsletter = get_sub_field( 'illustration_newsletter' );
 
-				if ( ! empty( $illustration ) ) {
-					$illustration_url   = $illustration['url'];
-					$illustration_title = $illustration['title'];
-					$illustration_alt   = $illustration['alt'];
-					$illustration_size  = 'large';
-					$illustration_large = $illustration['sizes'][ $illustration_size ];
+				if ( $illustration_video_newsletter ) {
+					$illustration_video_newsletter_url = $illustration_video_newsletter['url'];
+				}
+
+				if ( ! empty( $illustration_newsletter ) ) {
+					$illustration_newsletter_url   = $illustration_newsletter['url'];
+					$illustration_newsletter_title = $illustration_newsletter['title'];
+					$illustration_newsletter_alt   = $illustration_newsletter['alt'];
+					$illustration_newsletter_size  = 'large';
+					$illustration_newsletter_large = $illustration_newsletter['sizes'][ $illustration_newsletter_size ];
 				}
 
 				$message        = get_sub_field( 'message' );
@@ -20,7 +25,21 @@
 				?>
 
 				<div class="illustration">
-					<img src="<?php echo esc_url( $illustration_url ); ?>" alt="<?php echo esc_html( $illustration_alt ); ?>"/>
+					<?php if ( ! empty( $illustration_video_newsletter_url ) ) : ?>
+						<video autoplay loop muted>
+							<source src="<?php echo esc_url( $illustration_video_newsletter_url ); ?>" type="video/mp4">
+							<!-- <source src="movie.ogg" type="video/ogg"> -->
+							Your browser does not support the video tag.
+						</video>
+						<?php
+					else :
+						if ( ! empty( $illustration_newsletter_url ) ) :
+							?>
+							<img src="<?php echo esc_url( $illustration_newsletter_url ); ?>" alt="<?php echo esc_html( $illustration_newsletter_alt ); ?>"/>
+							<?php
+						endif;
+					endif;
+					?>
 				</div>
 
 				<div class="form">

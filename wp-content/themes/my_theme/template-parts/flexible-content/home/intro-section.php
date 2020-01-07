@@ -7,7 +7,7 @@
 			?>
 
 			<div class="intro" data-aos="fade-up">
-				<?php echo esc_html( $intro ); ?>
+				<p><?php echo esc_html( $intro ); ?></p>
 			</div>
 
 		</div>
