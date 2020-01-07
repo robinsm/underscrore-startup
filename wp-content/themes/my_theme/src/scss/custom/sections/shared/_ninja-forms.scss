@@ -1,0 +1,9 @@
+/*
+ * change the appearance of the exclamation mark that indicates an input error
+ */
+.body {
+	.nf-error.field-wrap .nf-field-element:after {
+		background-color: #ffffff;
+		color: #e80000;
+	}
+}
