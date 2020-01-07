@@ -8,6 +8,10 @@
 		align-items: center;
 		.illustration {
 			flex-basis: 50%;
+
+			video {
+				max-width: 100%;
+			}
 		}
 
 		.form {

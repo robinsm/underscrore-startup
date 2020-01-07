@@ -39,7 +39,8 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		min-height: 500px;
-		margin: 0px;
+		margin-top: 200px;
+		margin-bottom: 200px;
 
 		.feature {
 			flex-basis: 50%;
@@ -54,6 +55,9 @@
 		// - set flex-basis back to 100%
 		flex-direction: row;
 		flex-wrap: nowrap;
+		margin-top: 0px;
+		margin-bottom: 0px;
+
 		.feature {
 			flex-basis: 100%;
 		}
