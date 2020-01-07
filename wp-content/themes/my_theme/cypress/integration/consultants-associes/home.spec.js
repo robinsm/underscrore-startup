@@ -5,13 +5,8 @@ context('Navigation', () => {
 		cy.visit('/');
 	});
 
-	it('Visit root and take snapshot', () => {
-		cy.visit('/')
-			.url()
-			.should('contain', '/');
-
-		// Take a snapshot for visual diffing
-		cy.percySnapshot('homepage (en)');
+	it('Visit homepage and take snapshot', () => {
+		cy.takePercySnapshot('');
 	});
 
 	it('Verify all services links', () => {

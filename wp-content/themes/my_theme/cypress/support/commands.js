@@ -17,3 +17,12 @@ Cypress.Commands.add('checkHomepageServicesLink', servicesIndex => {
 
 	cy.go(-1);
 });
+
+Cypress.Commands.add('takePercySnapshot', pageName => {
+	cy.visit('/' + pageName)
+		.url()
+		.should('contain', '/' + pageName);
+
+	// Take a snapshot for visual diffing
+	cy.percySnapshot(pageName + ' (en)', { widths: [576, 768, 992, 1200] });
+});
