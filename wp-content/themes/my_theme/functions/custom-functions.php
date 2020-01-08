@@ -74,3 +74,21 @@ add_action( 'wp_footer', 'my_deregister_scripts' );
 /**
 * END: Disable Embeds in WordPress
 */
+
+/**
+ * START: Redirect all 404 errors to a custom page to allow us to use ACFPro to structure the page
+ */
+add_action( 'template_redirect', 'custom_404_redirect' );
+function custom_404_redirect()
+{
+    // check if is a 404 error, and it's on your jobs custom post type
+    if( is_404() )
+    {
+        // then redirect to yourdomain.com/jobs/
+        wp_redirect( home_url( '/error/' ) );
+        exit();
+    }
+}
+/**
+ * START: Redirect all 404 errors
+ */

@@ -9,16 +9,6 @@
 
 				$counter++;
 
-				$image = get_sub_field( 'image' );
-
-				if ( ! empty( $image ) ) {
-					$image_url   = $image['url'];
-					$image_title = $image['title'];
-					$image_alt   = $image['alt'];
-					$image_size  = 'large';
-					$image_large = $image['sizes'][ $image_size ];
-				}
-
 				$title = get_sub_field( 'title' );
 				?>
 
