@@ -104,7 +104,7 @@
 
 					<div class="form">
 						<div class="message">
-							<?php echo esc_html( $contact_section->message ); ?>
+							<p><?php echo esc_html( $contact_section->message ); ?></p>
 						</div>
 
 						<!-- Call plugin to insert newsletter signup form -->
