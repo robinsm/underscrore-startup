@@ -27,7 +27,7 @@
 		<div class="wide-container <?php echo $reduce_padding ? 'reduce-padding' : ''; ?>">
 			<div class="illustration">
 				<?php if ( ! empty( $illustration_video_url ) ) : ?>
-					<video autoplay loop muted>
+					<video playsinline autoplay loop muted>
 						<source src="<?php echo esc_url( $illustration_video_url ); ?>" type="video/mp4">
 						<!-- <source src="movie.ogg" type="video/ogg"> -->
 						Your browser does not support the video tag.

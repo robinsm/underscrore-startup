@@ -34,7 +34,7 @@
 		}
 
 		a {
-			font-family: $font__secondary;
+			font-family: $font__primary;
 			font-size: 1.1rem;
 			transition: all 0.3s ease 0s;
 			color: #6e7a8b;
@@ -56,6 +56,8 @@
 	@media (min-width: 992px) {
 		// on bigger resolutions, we want the services laid out in a row.
 
+		padding-left: 10%;
+		padding-right: 10%;
 		flex-direction: row;
 
 		.service {

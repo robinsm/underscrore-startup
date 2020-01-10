@@ -25,6 +25,7 @@
 				}
 
 				.title {
+					font-family: $font__primary;
 					text-transform: uppercase;
 					padding-bottom: 150px;
 					font-size: 1.125rem;
@@ -63,6 +64,10 @@
 			.service {
 				.service_padding {
 					min-height: 300px;
+
+					.title {
+						padding-bottom: 150px;
+					}
 				}
 			}
 		}
@@ -74,9 +79,6 @@
 			.service {
 				.service_padding {
 					min-height: 500px;
-					.title {
-						padding-bottom: 250px;
-					}
 				}
 			}
 		}

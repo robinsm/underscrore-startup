@@ -1,5 +1,6 @@
 .hero_section {
-	background-color: #476aa2;
+	//background-color: #476aa2;
+	background-color: #395e95;
 
 	.wide-container {
 		display: flex;
@@ -48,7 +49,7 @@
 			// if reduce_padding is set via ACF Pro, we apply the class 'reduce-padding'
 			min-height: 0px;
 			&.reduce-padding {
-				padding: 50px 0px;
+				padding: 65px 0px;
 			}
 
 			.illustration {

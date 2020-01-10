@@ -1,9 +1,31 @@
 /*
  * change the appearance of the exclamation mark that indicates an input error
  */
+// customise the exclamation mark on newsletter forms
+.nf-field {
+	.nf-error.field-wrap {
+		.nf-field-element:after {
+			background-color: #edf0f5;
+			color: #e80000;
+		}
+	}
+}
+
+// customise the exclamation mark on contact forms
 .body {
 	.nf-error.field-wrap .nf-field-element:after {
 		background-color: #ffffff;
 		color: #e80000;
+	}
+}
+
+.nf-response-msg {
+	p {
+		text-align: center;
+
+		// Large devices (desktops, 992px and up)
+		@media (min-width: 992px) {
+			text-align: left;
+		}
 	}
 }
