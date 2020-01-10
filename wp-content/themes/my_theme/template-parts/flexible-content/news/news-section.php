@@ -23,6 +23,9 @@
 			$older_news_image_large = $older_news_image['sizes'][ $older_news_image_size ];
 		}
 
+		$most_recent_news_image_source = get_sub_field( 'most_recent_news_image_source' );
+		$older_news_image_source = get_sub_field( 'older_news_image_source' );
+
 		$most_recent_news_title = get_sub_field( 'most_recent_news_title' );
 		$older_news_title       = get_sub_field( 'older_news_title' );
 
@@ -73,11 +76,11 @@
 				<?php echo $news_items_array[ $index ]->source; ?>
 			</div>
 			<div class="publish-date">
-				Published on <?php echo $news_items_array[ $index ]->publish_date; ?>
+				Publié le <?php echo $news_items_array[ $index ]->publish_date; ?>
 			</div>
 
 			<div class="link">
-				<a href="<?php echo $news_items_array[ $index ]->link; ?>" target="new">Read the article</a>
+				<a href="<?php echo $news_items_array[ $index ]->link; ?>" target="new">Lire l'article</a>
 			</div>
 
 		<?php } ?>
@@ -88,11 +91,15 @@
 					<div class="most-recent-news-title">
 						<h2><?php echo $most_recent_news_title; ?></h2>
 					</div>
-					<div class="most-recent-news-image">
-						<img src="<?php echo $most_recent_news_image_url; ?>"
-							 alt="<?php echo $most_recent_news_image_alt; ?>"/>
+					<div class="most-recent-news-image-wrapper">
+						<div class="most-recent-news-image">
+							<img src="<?php echo $most_recent_news_image_url; ?>"
+								alt="<?php echo $most_recent_news_image_alt; ?>"/>
+						</div>
+						<div class="most-recent-news-image-source">
+							<?php echo $most_recent_news_image_source; ?>
+						</div>
 					</div>
-
 				</div>
 
 				<div class="news-articles">
@@ -119,8 +126,14 @@
 					<div class="older-news-title">
 						<h2><?php echo $older_news_title; ?></h2>
 					</div>
-					<div class="older-news-image">
-						<img src="<?php echo $older_news_image_url; ?>" alt="<?php echo $older_news_image_alt; ?>"/>
+
+					<div class="older-news-image-wrapper">
+						<div class="older-news-image">
+							<img src="<?php echo $older_news_image_url; ?>" alt="<?php echo $older_news_image_alt; ?>"/>
+						</div>
+						<div class="older-news-image-source">
+							<?php echo $older_news_image_source; ?>
+						</div>
 					</div>
 
 				</div>

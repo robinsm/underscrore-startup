@@ -16,6 +16,7 @@
 			text-transform: uppercase;
 			color: #89929f;
 
+			padding-top: 10px;
 			padding-bottom: 30px;
 
 			.area {
@@ -27,7 +28,7 @@
 				}
 
 				.area-text {
-					font-family: $font__secondary;
+					font-family: $font__primary;
 				}
 			}
 		}

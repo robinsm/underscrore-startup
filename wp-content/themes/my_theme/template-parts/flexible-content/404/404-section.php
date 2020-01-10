@@ -29,7 +29,7 @@
 				<p><?php echo esc_html( $subtitle ); ?></p>
 			</div>
 			<div class="link">
-				<p><a href="/"><?php echo esc_html( $link_text ); ?></a></p>
+				<p><a href="<?php echo get_option('home'); ?>"><?php echo esc_html( $link_text ); ?></a></p>
 			</div>
 
 		</div>

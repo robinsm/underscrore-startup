@@ -3,15 +3,8 @@
 
 		<?php
 
-		$illustration = get_sub_field( 'illustration' );
-
-		if ( ! empty( $illustration ) ) {
-			$illustration_url   = $illustration['url'];
-			$illustration_title = $illustration['title'];
-			$illustration_alt   = $illustration['alt'];
-			$illustration_size  = 'large';
-			$illustration_large = $illustration['sizes'][ $illustration_size ];
-		}
+		$illustration_desktop_url = get_sub_field( 'illustration_desktop_url' );
+		$illustration_mobile_url = get_sub_field( 'illustration_mobile_url' );
 
 		$illustration_video = get_sub_field( 'illustration_video' );
 		if ( $illustration_video ) {
@@ -27,16 +20,27 @@
 		<div class="wide-container <?php echo $reduce_padding ? 'reduce-padding' : ''; ?>">
 			<div class="illustration">
 				<?php if ( ! empty( $illustration_video_url ) ) : ?>
-					<video autoplay loop muted>
+					<video id="hero-video" playsinline autoplay loop muted i>
 						<source src="<?php echo esc_url( $illustration_video_url ); ?>" type="video/mp4">
 						<!-- <source src="movie.ogg" type="video/ogg"> -->
 						Your browser does not support the video tag.
 					</video>
 					<?php
 				else :
-					if ( ! empty( $illustration_url ) ) :
+					if ( ! empty( $illustration_desktop_url ) ) :
 						?>
-						<img src="<?php echo esc_url( $illustration_url ); ?>" alt="<?php echo esc_html( $illustration_alt ); ?>"/>
+						<script>
+							var illustrationDesktopUrl = '<?php echo esc_url( $illustration_desktop_url ); ?>'; // Don't forget the extra semicolon!
+						</script>
+						<img id="animated-gif-desktop" src="<!-- replaced by javascript or element removed from DOM -->" alt=""/>
+						<?php
+					endif;
+					if ( ! empty( $illustration_mobile_url ) ) :
+						?>
+						<script>
+							var illustrationMobileUrl = '<?php echo esc_url( $illustration_mobile_url ); ?>'; // Don't forget the extra semicolon!
+						</script>
+						<img id="animated-gif-mobile" src="<!-- replaced by javascript or element removed from DOM	 -->" alt=""/>
 						<?php
 					endif;
 				endif;
