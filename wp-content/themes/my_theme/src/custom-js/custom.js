@@ -10,3 +10,28 @@ function mapsSelector() {
 		window.open('https://maps.google.com/maps?daddr=46.195248,6.127361&amp;ll=');
 	}
 }
+
+jQuery(document).ready(function() {
+	var animatedGifDesktopElement = jQuery('#animated-gif-desktop');
+	var animatedGifMobileElement = jQuery('#animated-gif-mobile');
+
+	var windowWidth = jQuery(window).width();
+
+	console.log('illustrationDesktopUrl : ' + illustrationDesktopUrl);
+	console.log('illustrationMobileUrl : ' + illustrationMobileUrl);
+	console.log('windowWidth : ' + windowWidth);
+
+	if (windowWidth >= 768 && illustrationDesktopUrl) {
+		//It is a large screen
+		console.log('replacing #animated-gif-desktop src with : ' + illustrationDesktopUrl);
+		console.log('removing #animated-gif-mobile from DOM');
+		jQuery('#animated-gif-desktop').attr('src', illustrationDesktopUrl);
+		jQuery('#animated-gif-mobile').remove();
+	} else {
+		//It is a small screen
+		console.log('replacing #animated-gif-mobile src with : ' + illustrationMobileUrl);
+		console.log('removing #animated-gif-desktop from DOM');
+		jQuery('#animated-gif-mobile').attr('src', illustrationMobileUrl);
+		jQuery('#animated-gif-desktop').remove();
+	}
+});

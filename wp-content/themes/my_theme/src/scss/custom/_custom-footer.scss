@@ -21,7 +21,6 @@
 		.footer_logo {
 			display: flex;
 			justify-content: center;
-			// max-width: 100%;
 		}
 
 		.footer_menu {
@@ -67,6 +66,9 @@
 
 		// Small devices (landscape phones, 576px and up)
 		@media (min-width: 576px) {
+			.footer_logo {
+				margin-bottom: 50px;
+			}
 			.footer_menu {
 				display: block;
 				margin-left: 0px;
@@ -77,6 +79,9 @@
 		@media (min-width: 992px) {
 			flex-direction: row;
 
+			.footer_logo {
+				margin-bottom: 0px;
+			}
 			.footer_menu {
 				margin-left: auto;
 			}
