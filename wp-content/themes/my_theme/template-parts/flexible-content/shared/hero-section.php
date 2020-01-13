@@ -1,3 +1,4 @@
+
 <?php if ( get_row_layout() == 'hero_section' ) : ?>
 	<div class="hero_section">
 

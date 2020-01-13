@@ -166,6 +166,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 /**
- * Load our custom functions
+ * Load our Marvil56 custom functions
  */
 require get_template_directory() . '/functions/custom-functions.php';
+require get_template_directory() . '/functions/acf-functions.php';
