@@ -29,3 +29,21 @@
 		}
 	}
 }
+
+/*
+ * START increase spacing between form inputs on tablet and mobile resolutions
+ */
+.form {
+	.nf-form-wrap {
+		.one-half {
+			margin-top: 50px;
+		}
+	}
+}
+
+.textarea-wrap {
+	margin-top: 50px;
+}
+/*
+ * END increase spacing between form inputs on tablet and mobile resolutions
+ */
