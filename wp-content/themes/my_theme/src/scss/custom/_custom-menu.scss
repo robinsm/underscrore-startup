@@ -19,7 +19,7 @@
 
 .logo {
 	cursor: pointer;
-	max-width: 80%;
+	max-width: 75%;
 
 	// Medium devices (tablets, 768px and up)
 	@media (min-width: 768px) {
@@ -98,6 +98,10 @@ nav {
 		position: absolute;
 		top: 36px;
 		right: 20%;
+
+		img {
+			max-height: 22px;
+		}
 
 		// Medium devices (tablets, 768px and up)
 		@media (min-width: 768px) {
